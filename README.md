@@ -1,6 +1,6 @@
 # ziarah_rasul
 
-A new Flutter project.
+Aplikasi Panduan umrah dan Ziaroh Rosul
 
 ## Getting Started
 
