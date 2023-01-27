@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/home_screen.dart';
-import 'package:ziarah_rasul/page/single_page.dart';
+import 'package:ziarah_rasul/single_page/single_page.dart';
 
 void main() {
   runApp(const MyApp());

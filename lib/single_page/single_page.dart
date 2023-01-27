@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:ziarah_rasul/constants.dart';
-import 'package:ziarah_rasul/page/appbar_page.dart';
-import 'package:ziarah_rasul/page/body_page.dart';
-import 'package:ziarah_rasul/page/navbar_page.dart';
+import 'package:ziarah_rasul/single_page/appbar_page.dart';
+import 'package:ziarah_rasul/single_page/body_page.dart';
+import 'package:ziarah_rasul/single_page/navbar_page.dart';
 
 class single_page extends StatefulWidget {
   const single_page({super.key});
