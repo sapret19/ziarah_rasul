@@ -51,50 +51,7 @@ class HomeScreen extends StatelessWidget {
                     left: 20,
                     child: Row(
                       children: [
-                        Container(
-                          height: 128,
-                          width: 241,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                  top: 20,
-                                  left: 24,
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        height: 63,
-                                        width: 5,
-                                        decoration: BoxDecoration(
-                                          color: kPrimaryColor,
-                                        ),
-                                      ),
-                                      
-                                    ],
-                                  ),),
-                              Positioned(
-                                top: 25,
-                                left: 38,
-                                child: Row(
-                                children: [
-                                  Text("Ziaroh Rosul \nKe-18",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                    color: kPrimaryColor
-                                  )),
-                                  
-                                  
-                                  
-                                ],
-                              ))
-                              
-                            ],
-                          ),
-                        ),
+                        Pengumuman(),
                       ],
                     ),
                   )
@@ -118,6 +75,157 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class Pengumuman extends StatelessWidget {
+  const Pengumuman({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Container(
+                  height: 128,
+                  width: 241,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Stack(
+                    children: [
+                      Positioned(
+                          top: 20,
+                          left: 24,
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 63,
+                                width: 5,
+                                decoration: BoxDecoration(
+                                  color: kPrimaryColor,
+                                ),
+                              ),
+                              
+                            ],
+                          ),),
+                      Positioned(
+                        top: 25,
+                        left: 38,
+                        child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Text("Ziaroh Rosul \nKe-18",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.bold,
+                                color: kPrimaryColor
+                              )),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("24 Feb- 12 Mar",
+                              textAlign: TextAlign.start,
+                              
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.bold,
+                                color: kPrimaryColor,
+                                
+                              )),
+                            ],
+                          ),
+                        
+                          
+                          
+                          
+                        ],
+                      ))
+                      
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  height: 128,
+                  width: 241,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Stack(
+                    children: [
+                      Positioned(
+                          top: 20,
+                          left: 24,
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 63,
+                                width: 5,
+                                decoration: BoxDecoration(
+                                  color: kPrimaryColor,
+                                ),
+                              ),
+                              
+                            ],
+                          ),),
+                      Positioned(
+                        top: 25,
+                        left: 38,
+                        child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Text("Ziaroh Rosul \nKe-18",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.bold,
+                                color: kPrimaryColor
+                              )),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("24 Feb- 12 Mar",
+                              textAlign: TextAlign.start,
+                              
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.bold,
+                                color: kPrimaryColor,
+                                
+                              )),
+                            ],
+                          ),
+                        
+                          
+                          
+                          
+                        ],
+                      ))
+                      
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        
+      ],
     );
   }
 }
