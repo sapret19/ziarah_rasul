@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-
         appBar: BagianHead(),
         body: Column(
           children: [
@@ -71,7 +70,7 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image(
-            image: const AssetImage('images/logo-zr.png'),
+            image: const AssetImage('assets/images/Logo-ZR.png'),
             height: AppBar().preferredSize.height,
           ),
         ],
@@ -103,56 +102,48 @@ class Pengumuman extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                          top: 20,
-                          left: 24,
+                        top: 20,
+                        left: 24,
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 63,
+                              width: 5,
+                              decoration: BoxDecoration(
+                                color: kPrimaryColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                          top: 25,
+                          left: 38,
                           child: Row(
                             children: [
-                              Container(
-                                height: 63,
-                                width: 5,
-                                decoration: BoxDecoration(
-                                  color: kPrimaryColor,
-                                ),
+                              Column(
+                                children: [
+                                  Text("Ziaroh Rosul \nKe-18",
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.bold,
+                                          color: kPrimaryColor)),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("24 Feb- 12 Mar",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.bold,
+                                        color: kPrimaryColor,
+                                      )),
+                                ],
                               ),
-                              
                             ],
-                          ),),
-                      Positioned(
-                        top: 25,
-                        left: 38,
-                        child: Row(
-                        children: [
-                          Column(
-                            children: [
-                              Text("Ziaroh Rosul \nKe-18",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.bold,
-                                color: kPrimaryColor
-                              )),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text("24 Feb- 12 Mar",
-                              textAlign: TextAlign.start,
-                              
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.bold,
-                                color: kPrimaryColor,
-                                
-                              )),
-                            ],
-                          ),
-                        
-                          
-                          
-                          
-                        ],
-                      ))
-                      
+                          ))
                     ],
                   ),
                 ),
@@ -168,56 +159,48 @@ class Pengumuman extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                          top: 20,
-                          left: 24,
+                        top: 20,
+                        left: 24,
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 63,
+                              width: 5,
+                              decoration: BoxDecoration(
+                                color: kPrimaryColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                          top: 25,
+                          left: 38,
                           child: Row(
                             children: [
-                              Container(
-                                height: 63,
-                                width: 5,
-                                decoration: BoxDecoration(
-                                  color: kPrimaryColor,
-                                ),
+                              Column(
+                                children: [
+                                  Text("Ziaroh Rosul \nKe-18",
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.bold,
+                                          color: kPrimaryColor)),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("24 Feb- 12 Mar",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.bold,
+                                        color: kPrimaryColor,
+                                      )),
+                                ],
                               ),
-                              
                             ],
-                          ),),
-                      Positioned(
-                        top: 25,
-                        left: 38,
-                        child: Row(
-                        children: [
-                          Column(
-                            children: [
-                              Text("Ziaroh Rosul \nKe-18",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.bold,
-                                color: kPrimaryColor
-                              )),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text("24 Feb- 12 Mar",
-                              textAlign: TextAlign.start,
-                              
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.bold,
-                                color: kPrimaryColor,
-                                
-                              )),
-                            ],
-                          ),
-                        
-                          
-                          
-                          
-                        ],
-                      ))
-                      
+                          ))
                     ],
                   ),
                 ),
@@ -225,9 +208,7 @@ class Pengumuman extends StatelessWidget {
             ),
           ),
         ),
-        
       ],
-
     );
   }
 }
