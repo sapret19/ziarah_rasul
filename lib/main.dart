@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/home_screen.dart';
+import 'package:ziarah_rasul/list_page.dart/list_page.dart';
 import 'package:ziarah_rasul/single_page/single_page.dart';
 
 void main() {
@@ -21,6 +22,6 @@ class MyApp extends StatelessWidget {
             primaryColor: kPrimaryColor,
             textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
             visualDensity: VisualDensity.adaptivePlatformDensity),
-        home: const single_page());
+        home: const ListPage());
   }
 }

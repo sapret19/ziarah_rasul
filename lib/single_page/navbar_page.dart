@@ -9,7 +9,7 @@ class navbar_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 75,
+      height: 65,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(50),
