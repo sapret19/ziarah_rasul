@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ziarah_rasul/constants.dart';
+import 'package:ziarah_rasul/single_page/appbar_page.dart';
+import 'package:ziarah_rasul/single_page/body_page.dart';
+import 'package:ziarah_rasul/single_page/navbar_page.dart';
 
 class single_page extends StatefulWidget {
   const single_page({super.key});
@@ -15,11 +17,9 @@ class _single_pageState extends State<single_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: kPrimaryColor,
-        leading: IconButton(
-            onPressed: () {}, icon: SvgPicture.asset("assets/icon/back.svg")),
-      ),
+      appBar: AppBar_page(context),
+      body: Body_Page(),
+      bottomNavigationBar: navbar_page(),
     );
   }
 }
