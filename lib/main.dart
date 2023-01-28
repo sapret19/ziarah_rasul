@@ -21,6 +21,6 @@ class MyApp extends StatelessWidget {
             primaryColor: kPrimaryColor,
             textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
             visualDensity: VisualDensity.adaptivePlatformDensity),
-        home: const single_page());
+        home: const HomeScreen());
   }
 }
