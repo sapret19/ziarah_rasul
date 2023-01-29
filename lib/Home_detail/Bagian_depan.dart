@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/Doa-doa/Doa_safar.dart';
 import 'package:ziarah_rasul/Doa-doa/Doa_ZR.dart';
+import 'package:ziarah_rasul/Doa-doa/Fikih_umrah.dart';
 
 class Bagian_depan extends StatelessWidget {
   const Bagian_depan({
@@ -177,51 +178,10 @@ class Bagian_depan extends StatelessWidget {
             ],
           ),
           
-           Row(
-             children: [
-               Column(
-                    children: [
-                      SizedBox(height: 10,),
-                      Container(
-                        height: 242,
-                        width: 190,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          image: DecorationImage(image: ExactAssetImage("images/contoh.jpg"),fit: BoxFit.cover),
-                          borderRadius: BorderRadius.circular(20)
-                        ),
-                      ),
-                      Column(
-                        children: [
-                          Padding(padding: EdgeInsets.all(10),
-                          child: Text('Nama Doa Disisni'),)
-                        ],
-                      )
-                    ],
-                  ),
-                  SizedBox(width: 10,),
-                Column(
-                  children: [
-                    Container(
-                      color: Colors.black,
-                      height: 100,
-                      width: 100,
-                    ),
-                    SizedBox(height: 10,),
-                     Container(
-                      color: Colors.black,
-                      height: 100,
-                      width: 100,
-                    ),
-                  ],
-                )
-             ],
-             
-           )
+           Fikih_umrah()
         ],
       ),
     );
   }
 }
-
 
