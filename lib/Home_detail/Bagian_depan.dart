@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ziarah_rasul/constants.dart';
+import 'package:ziarah_rasul/Doa-doa/Doa_safar.dart';
+import 'package:ziarah_rasul/Doa-doa/Doa_ZR.dart';
 
 class Bagian_depan extends StatelessWidget {
   const Bagian_depan({
@@ -14,8 +16,7 @@ class Bagian_depan extends StatelessWidget {
       decoration: const BoxDecoration(
           color: Color.fromRGBO(239, 239, 239, 1),
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30),
-              topRight: Radius.circular(30))),
+              topLeft: Radius.circular(30), topRight: Radius.circular(30))),
       child: Column(
         children: [
           const SizedBox(
@@ -23,11 +24,10 @@ class Bagian_depan extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: kDefaultPadding),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Text(
                   "Doa Safar",
                   style: const TextStyle(
@@ -38,8 +38,7 @@ class Bagian_depan extends StatelessWidget {
                 ),
               ),
               Container(
-                padding:
-                    EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Text(
                   "Lihat Semua",
                   style: TextStyle(
@@ -56,88 +55,32 @@ class Bagian_depan extends StatelessWidget {
           ),
           // widget geser doa safar
           SingleChildScrollView(
+            padding: EdgeInsets.only(left: 14),
             scrollDirection: Axis.horizontal,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                  width: 7,
-                ),
-                Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(
-                  width: 7,
-                ),
-                Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(
-                  width: 7,
-                ),
-                Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(
-                  width: 7,
-                ),
-                Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(
-                  width: 7,
-                ),
-                Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(
-                  width: 7,
-                ),
-                Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                  ),
-                ),
+                
+                Doa_safar(image: "assets/images/Logo-ZR.png"),
+                Doa_safar(image: "assets/images/Logo-ZR.png"),
+                Doa_safar(image: "assets/images/Logo-ZR.png"),
+                Doa_safar(image: "assets/images/Logo-ZR.png"),
+                Doa_safar(image: "assets/images/Logo-ZR.png"),
+                Doa_safar(image: "assets/images/Logo-ZR.png"),
+                Doa_safar(image: "assets/images/Logo-ZR.png"),
               ],
             ),
           ),
+
           SizedBox(
             height: 10,
           ),
+          //Doa Ziarah Rasul
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: kDefaultPadding),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Text(
                   "Ziarah Rasul",
                   style: const TextStyle(
@@ -148,8 +91,7 @@ class Bagian_depan extends StatelessWidget {
                 ),
               ),
               Container(
-                padding:
-                    EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Text(
                   "Lihat Semua",
                   style: TextStyle(
@@ -161,19 +103,125 @@ class Bagian_depan extends StatelessWidget {
               ),
             ],
           ),
-          // Container(
-          //   color: Colors.white,
-          //   height: 20,
-          //   width: 20,
-          //   child: Column(
-          //     children: [
-          //       Image.asset('')
-          //     ],
-          //   ),
-          // )
+          SingleChildScrollView(
+            padding: EdgeInsets.only(left: 14),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Doa_ZR(
+                  image: "Images/contoh.jpg",
+                  title: "Jenenge \nDungone",
+                ),
+                Doa_ZR(
+                  image: "Images/contoh.jpg",
+                  title: "Jenenge \nDungone",
+                ),
+                Doa_ZR(
+                  image: "Images/contoh.jpg",
+                  title: "Jenenge \nDungone",
+                ),
+                Doa_ZR(
+                  image: "Images/contoh.jpg",
+                  title: "Jenenge \nDungone",
+                ),
+                Doa_ZR(
+                  image: "Images/contoh.jpg",
+                  title: "Jenenge \nDungone",
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          //Fikih Umroh
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                child: Text(
+                  "Fikih Umrah",
+                  style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: kPrimaryColor),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                child: ElevatedButton(
+                  
+                  onPressed: () {
+                    
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: kPrimaryColor,
+                    shape: StadiumBorder()
+                  ),
+                  
+                  child: Text(
+                    
+                    "Lihat Semua",
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w300,
+                        color: Colors.white),
+                  ),
+                ),
+              ),
+             
+            ],
+          ),
+          
+           Row(
+             children: [
+               Column(
+                    children: [
+                      SizedBox(height: 10,),
+                      Container(
+                        height: 242,
+                        width: 190,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          image: DecorationImage(image: ExactAssetImage("images/contoh.jpg"),fit: BoxFit.cover),
+                          borderRadius: BorderRadius.circular(20)
+                        ),
+                      ),
+                      Column(
+                        children: [
+                          Padding(padding: EdgeInsets.all(10),
+                          child: Text('Nama Doa Disisni'),)
+                        ],
+                      )
+                    ],
+                  ),
+                  SizedBox(width: 10,),
+                Column(
+                  children: [
+                    Container(
+                      color: Colors.black,
+                      height: 100,
+                      width: 100,
+                    ),
+                    SizedBox(height: 10,),
+                     Container(
+                      color: Colors.black,
+                      height: 100,
+                      width: 100,
+                    ),
+                  ],
+                )
+             ],
+             
+           )
         ],
-        
       ),
     );
   }
 }
+
+
