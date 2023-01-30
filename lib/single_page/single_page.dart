@@ -7,7 +7,7 @@ import 'package:ziarah_rasul/single_page/appbar_page.dart';
 import 'package:ziarah_rasul/single_page/navbar_page.dart';
 
 class single_page extends StatefulWidget {
-  final List<Model_Daftar> daftar;
+  final List<Model_doa_safar> daftar;
   final int index;
   const single_page({super.key, required this.daftar, required this.index});
 
@@ -73,7 +73,49 @@ class _single_pageState extends State<single_page> {
           ],
         ),
       ),
-      bottomNavigationBar: const navbar_page(),
+      bottomNavigationBar: Container(
+        height: 65,
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(50),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black.withOpacity(.1),
+                  blurRadius: 30,
+                  offset: Offset(0, 1))
+            ]),
+        margin: EdgeInsets.only(bottom: 30, left: 40, right: 40),
+        child: Padding(
+          padding: const EdgeInsets.only(
+              left: kDefaultPadding, right: kDefaultPadding),
+          child: Row(
+            children: [
+              FloatingActionButton(
+                heroTag: "f1",
+                backgroundColor: Colors.white,
+                mini: true,
+                onPressed: () {},
+                child: Image.asset(
+                  'assets/images/left.png',
+                  color: kPrimaryColor,
+                ),
+
+                // scale: 0.1,
+              ),
+              Spacer(),
+              FloatingActionButton(
+                  heroTag: "f2",
+                  backgroundColor: Colors.white,
+                  mini: true,
+                  onPressed: () {},
+                  child: Image.asset(
+                    'assets/images/right.png',
+                    color: kPrimaryColor,
+                  )),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

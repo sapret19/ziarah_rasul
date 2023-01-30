@@ -1,5 +1,13 @@
-class Model_Daftar {
-  final String nama, link;
+class Model_doa_safar {
+  final String nama;
 
-  Model_Daftar(this.nama, this.link);
+  Model_doa_safar(
+    this.nama,
+  );
+}
+
+class Model_Judul {
+  final String judul;
+
+  Model_Judul(this.judul);
 }

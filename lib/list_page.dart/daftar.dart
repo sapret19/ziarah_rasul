@@ -12,22 +12,8 @@ import 'package:ziarah_rasul/single_page/single_page.dart';
 class daftar extends StatelessWidget {
   daftar({super.key});
 
-  static List<String> nama = [
-    'Doa Keluar Rumah',
-    'Shalat Safar',
-    'Zikir dan Doa Setelah Shalat Safar',
-    'Doa Naik Kendaraan',
-    'Doa Ketika Akan Tiba di Tujuan'
-  ];
-  static List<Widget> link = [
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen()
-  ];
-  final List<Model_Daftar> ModelDaftar = List.generate(nama.length,
-      (index) => Model_Daftar('${nama[index].toString()}', '${link[index]}'));
+  final List<Model_doa_safar> Modeldoasafar = List.generate(
+      nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +21,7 @@ class daftar extends StatelessWidget {
         itemBuilder: ((context, index) {
           return ListTile(
             title: Text(
-              ModelDaftar[index].nama,
+              Modeldoasafar[index].nama,
               style: TextStyle(
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w400,
@@ -45,7 +31,7 @@ class daftar extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) =>
-                      single_page(daftar: ModelDaftar, index: index)));
+                      single_page(daftar: Modeldoasafar, index: index)));
             },
           );
         }),
@@ -59,3 +45,20 @@ class daftar extends StatelessWidget {
         itemCount: nama.length);
   }
 }
+
+List<String> nama = [
+  'Doa Keluar Rumah',
+  'Shalat Safar',
+  'Zikir dan Doa Setelah Shalat Safar',
+  'Doa Naik Kendaraan',
+  'Doa Ketika Akan Tiba di Tujuan'
+];
+List<String> judul = [
+  'Doa Safar',
+  'Ziarah rasul',
+  'Fikih Umrah',
+  'Doa-Doa Umrah',
+  'Tempat Mustajabah',
+  'Istighosah, Waqiah, dan Doa',
+  'Lain-Lain'
+];
