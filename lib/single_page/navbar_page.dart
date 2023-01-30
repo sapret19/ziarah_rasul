@@ -26,7 +26,9 @@ class navbar_page extends StatelessWidget {
         child: Row(
           children: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  
+                },
                 icon: Image.asset(
                   "assets/images/left.png",
                   color: kPrimaryColor,
