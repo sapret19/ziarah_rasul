@@ -47,7 +47,7 @@ class Bagian_depan extends StatelessWidget {
                   "Lihat Semua",
                   style: TextStyle(
                       fontFamily: 'Poppins',
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w300,
                       color: kPrimaryColor),
                 ),
@@ -99,7 +99,7 @@ class Bagian_depan extends StatelessWidget {
                   "Lihat Semua",
                   style: TextStyle(
                       fontFamily: 'Poppins',
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w300,
                       color: kPrimaryColor),
                 ),
@@ -197,7 +197,7 @@ class Bagian_depan extends StatelessWidget {
                   "Lihat Semua",
                   style: TextStyle(
                       fontFamily: 'Poppins',
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w300,
                       color: kPrimaryColor),
                 ),
@@ -231,6 +231,7 @@ class Bagian_depan extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
+          // Tempat Mustajabah
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -252,7 +253,7 @@ class Bagian_depan extends StatelessWidget {
                   "Lihat Semua",
                   style: TextStyle(
                       fontFamily: 'Poppins',
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w300,
                       color: kPrimaryColor),
                 ),
@@ -276,6 +277,7 @@ class Bagian_depan extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
+          // Doa Lain-lain
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

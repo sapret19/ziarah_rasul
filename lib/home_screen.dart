@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:ziarah_rasul/Home_detail/Bagian_depan.dart';
 import 'package:ziarah_rasul/Home_detail/pencarian.dart';
 import 'package:ziarah_rasul/Home_detail/pengumuman.dart';
+import 'appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -32,20 +33,5 @@ class HomeScreen extends StatelessWidget {
         ));
   }
 
-  AppBar BagianHead() {
-    return AppBar(
-      backgroundColor: kPrimaryColor,
-      elevation: 0,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image(
-            image: const AssetImage('assets/images/Logo-ZR.png'),
-            height: AppBar().preferredSize.height,
-          ),
-        ],
-      ),
-    );
-  }
+ 
 }
-
