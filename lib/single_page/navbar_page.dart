@@ -25,20 +25,30 @@ class navbar_page extends StatelessWidget {
             left: kDefaultPadding, right: kDefaultPadding),
         child: Row(
           children: [
-            IconButton(
-                onPressed: () {},
-                icon: Image.asset(
-                  "assets/images/left.png",
-                  color: kPrimaryColor,
-                  // scale: 0.1,
-                )),
+            FloatingActionButton(
+              heroTag: "f1",
+              backgroundColor: Colors.white,
+              mini: true,
+              onPressed: () {
+                
+              },
+              child: Image.asset(
+                'assets/images/left.png',
+                color: kPrimaryColor,
+              ),
+
+              // scale: 0.1,
+            ),
             Spacer(),
-            IconButton(
+            FloatingActionButton(
+              heroTag: "f2",
+                backgroundColor: Colors.white,
+                mini: true,
                 onPressed: () {},
-                icon: Image.asset(
-                  "assets/images/right.png",
+                child: Image.asset(
+                  'assets/images/right.png',
                   color: kPrimaryColor,
-                ))
+                )),
           ],
         ),
       ),
