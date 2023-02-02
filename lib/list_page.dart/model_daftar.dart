@@ -11,3 +11,9 @@ class Model_Judul {
 
   Model_Judul(this.judul);
 }
+
+class Model_ziarah_rasul {
+  final String ziarah_rasul;
+
+  Model_ziarah_rasul(this.ziarah_rasul);
+}

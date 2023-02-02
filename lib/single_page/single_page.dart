@@ -7,9 +7,9 @@ import 'package:ziarah_rasul/single_page/appbar_page.dart';
 import 'package:ziarah_rasul/single_page/navbar_page.dart';
 
 class single_page extends StatefulWidget {
-  final List<Model_doa_safar> daftar;
+  final List<Model_doa_safar> list_doa_safar;
   int index;
-  single_page({super.key, required this.daftar, required this.index});
+  single_page({super.key, required this.list_doa_safar, required this.index});
 
   @override
   State<single_page> createState() => _single_pageState();
@@ -44,7 +44,7 @@ class _single_pageState extends State<single_page> {
                     ),
                     Text(
                       textAlign: TextAlign.center,
-                      widget.daftar[widget.index].nama,
+                      widget.list_doa_safar[widget.index].nama,
                       style: const TextStyle(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.bold,
@@ -55,10 +55,10 @@ class _single_pageState extends State<single_page> {
                     // SizedBox(
                     //   height: 20,
                     // ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.all(kDefaultPadding / 2.5),
                       child: Text(
-                        'Moisturizing Reduces Skin Problems – Moisturizing everyday can reduce the chance of developing extreme dryness or oiliness. Both extremes are harmful for skin and cause common skin conditions like acne Moisturizing Reduces Skin Problems – Moisturizing everyday can reduce the chance of developing extreme dryness or oiliness. Both extremes are harmful for skin and cause common skin conditions like acne.Moisturizing Reduces Skin Problems Moisturizing everyday can reduce the chance of ',
+                        widget.list_doa_safar[widget.index].nama,
                         style: TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 16,
@@ -115,7 +115,7 @@ class _single_pageState extends State<single_page> {
                   mini: true,
                   onPressed: () {
                     setState(() {
-                      if (widget.index != widget.daftar.length - 1) {
+                      if (widget.index != widget.list_doa_safar.length - 1) {
                         widget.index++;
                       }
                     });

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/home_screen.dart';
+import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
 
 AppBar AppBar_page(BuildContext context) {
   return AppBar(
@@ -16,7 +17,7 @@ AppBar AppBar_page(BuildContext context) {
       padding: EdgeInsets.only(left: kDefaultPadding),
     ),
     title: Text(
-      'Doa Safar',
+      'Ziarah Rasul',
       style: TextStyle(
           fontFamily: 'Poppins', fontWeight: FontWeight.bold, fontSize: 20),
     ),

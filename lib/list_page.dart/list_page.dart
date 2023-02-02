@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:ziarah_rasul/constants.dart';
-import 'package:ziarah_rasul/list_page.dart/daftar.dart';
+import 'package:ziarah_rasul/list_page.dart/list_doa_safar.dart';
 import 'package:ziarah_rasul/single_page/appbar_page.dart';
 
 class ListPage extends StatefulWidget {
@@ -35,7 +35,7 @@ class _ListPageState extends State<ListPage> {
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20)),
                   ),
-                  child: daftar()),
+                  child: list_doa_safar()),
             ),
           ],
         ),
