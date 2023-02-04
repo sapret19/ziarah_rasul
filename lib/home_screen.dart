@@ -14,9 +14,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-
         backgroundColor: kPrimaryColor,
-
         appBar: BagianHead(),
         body: SingleChildScrollView(
           child: Column(
@@ -32,6 +30,4 @@ class HomeScreen extends StatelessWidget {
           ),
         ));
   }
-
- 
 }
