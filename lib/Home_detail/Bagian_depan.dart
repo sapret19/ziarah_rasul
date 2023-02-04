@@ -73,7 +73,7 @@ class Bagian_depan extends StatelessWidget {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => single_page(
                                 list_doa_safar: Modeldoasafar,
-                                index: 9,
+                                index: 32,
                               )));
                     },
                     child: Doa_safar(image: "assets/images/Logo-ZR.png")),
