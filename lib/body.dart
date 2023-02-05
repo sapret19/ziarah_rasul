@@ -30,7 +30,8 @@ class Body extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 20, 20, 20).withOpacity(0.3),
+                            color: Color.fromARGB(255, 20, 20, 20)
+                                .withOpacity(0.3),
                             spreadRadius: 3,
                             blurRadius: 10,
                             offset: Offset(0, 0),
@@ -40,7 +41,7 @@ class Body extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          padding:EdgeInsets.only(left: kDefaultPadding),
+                          padding: EdgeInsets.only(left: kDefaultPadding),
                           height: double.infinity,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,14 +49,11 @@ class Body extends StatelessWidget {
                             children: [
                               Container(
                                 margin: EdgeInsets.fromLTRB(0, 0, 0, 16),
-                                
                                 child: Image(
-                                  
-                                  image: AssetImage('icons/logo_safar.png')),
+                                    image: AssetImage('icons/logo_safar.png')),
                               ),
                               Text('DOADOA')
                             ],
-                            
                           ),
                         ),
                         Container(
@@ -100,7 +98,8 @@ class Body extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 20, 20, 20).withOpacity(0.3),
+                            color: Color.fromARGB(255, 20, 20, 20)
+                                .withOpacity(0.3),
                             spreadRadius: 3,
                             blurRadius: 10,
                             offset: Offset(0, 0),
@@ -109,7 +108,9 @@ class Body extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 40,),
+              SizedBox(
+                height: 40,
+              ),
               // Baris Baru
               Row(
                 children: [
@@ -122,7 +123,8 @@ class Body extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 20, 20, 20).withOpacity(0.3),
+                            color: Color.fromARGB(255, 20, 20, 20)
+                                .withOpacity(0.3),
                             spreadRadius: 3,
                             blurRadius: 10,
                             offset: Offset(0, 0),
@@ -132,7 +134,7 @@ class Body extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          padding:EdgeInsets.only(left: kDefaultPadding),
+                          padding: EdgeInsets.only(left: kDefaultPadding),
                           height: double.infinity,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,14 +142,11 @@ class Body extends StatelessWidget {
                             children: [
                               Container(
                                 margin: EdgeInsets.fromLTRB(0, 0, 0, 16),
-                                
                                 child: Image(
-                                  
-                                  image: AssetImage('icons/logo_safar.png')),
+                                    image: AssetImage('icons/logo_safar.png')),
                               ),
                               Text('DOADOA')
                             ],
-                            
                           ),
                         ),
                         Container(
@@ -192,7 +191,8 @@ class Body extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 20, 20, 20).withOpacity(0.3),
+                            color: Color.fromARGB(255, 20, 20, 20)
+                                .withOpacity(0.3),
                             spreadRadius: 3,
                             blurRadius: 10,
                             offset: Offset(0, 0),
@@ -201,7 +201,9 @@ class Body extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 40,),
+              SizedBox(
+                height: 40,
+              ),
               // Baris Baru
               Row(
                 children: [
@@ -214,7 +216,8 @@ class Body extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 20, 20, 20).withOpacity(0.3),
+                            color: Color.fromARGB(255, 20, 20, 20)
+                                .withOpacity(0.3),
                             spreadRadius: 3,
                             blurRadius: 10,
                             offset: Offset(0, 0),
@@ -224,7 +227,7 @@ class Body extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          padding:EdgeInsets.only(left: kDefaultPadding),
+                          padding: EdgeInsets.only(left: kDefaultPadding),
                           height: double.infinity,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -232,14 +235,11 @@ class Body extends StatelessWidget {
                             children: [
                               Container(
                                 margin: EdgeInsets.fromLTRB(0, 0, 0, 16),
-                                
                                 child: Image(
-                                  
-                                  image: AssetImage('icons/logo_safar.png')),
+                                    image: AssetImage('icons/logo_safar.png')),
                               ),
                               Text('DOADOA')
                             ],
-                            
                           ),
                         ),
                         Container(
@@ -284,7 +284,8 @@ class Body extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 20, 20, 20).withOpacity(0.3),
+                            color: Color.fromARGB(255, 20, 20, 20)
+                                .withOpacity(0.3),
                             spreadRadius: 3,
                             blurRadius: 10,
                             offset: Offset(0, 0),

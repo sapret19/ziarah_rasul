@@ -24,7 +24,7 @@ class Lainlain extends StatelessWidget {
                 width: 154,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: ExactAssetImage("images/contoh.jpg"),
+                      image: ExactAssetImage("assets/images/contoh.jpg"),
                       fit: BoxFit.cover,
                     ),
                     color: Colors.white,

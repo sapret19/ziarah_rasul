@@ -17,16 +17,21 @@ class Tempat_mustajab extends StatelessWidget {
               width: 90,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: ExactAssetImage("images/contoh.jpg"),
+                    image: ExactAssetImage("assets/images/contoh.jpg"),
                     fit: BoxFit.cover),
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
               ),
             ),
-            Padding(padding: EdgeInsets.all(10),child: Text("COBA SAJA"),)
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text("COBA SAJA"),
+            )
           ],
         ),
-        SizedBox(width: 7,)
+        SizedBox(
+          width: 7,
+        )
       ],
     );
   }
