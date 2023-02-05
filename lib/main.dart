@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ziarah_rasul/Post/Global_post.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/home_navbar.dart';
 import 'package:ziarah_rasul/home_screen.dart';
@@ -7,6 +8,7 @@ import 'package:ziarah_rasul/list_page.dart/list_doa_safar.dart';
 import 'package:ziarah_rasul/list_page.dart/list_page.dart';
 import 'package:ziarah_rasul/list_page.dart/pdf_list.dart';
 import 'package:ziarah_rasul/single_page/single_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +28,6 @@ class MyApp extends StatelessWidget {
             primaryColor: kPrimaryColor,
             textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
             visualDensity: VisualDensity.adaptivePlatformDensity),
-        home: list_doa_safar());
+        home: HomeWithnav());
   }
 }
