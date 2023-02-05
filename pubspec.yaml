@@ -38,7 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   line_icons: ^2.0.0
   google_nav_bar: ^5.0.6
-
+  syncfusion_flutter_pdfviewer: ^20.4.48
+  # syncfusion_flutter_pdfviewer: ^20.4.48
   # flutter_svg: ^0.17.4
 
 
@@ -71,6 +72,7 @@ flutter:
     
     - assets/images/
     - assets/icons/
+    - assets/pdf/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
