@@ -6,6 +6,7 @@ import 'package:ziarah_rasul/Doa-doa/Fikih_umrah.dart';
 import 'package:ziarah_rasul/Home_detail/Bagian_depan.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/home_screen.dart';
+import 'package:ziarah_rasul/home_view.dart';
 
 class HomeWithnav extends StatefulWidget {
   const HomeWithnav({super.key});
@@ -17,7 +18,7 @@ class HomeWithnav extends StatefulWidget {
 class _HomeWithnavState extends State<HomeWithnav> {
   int _pageindex = 0;
   final List<Widget> _tablist = [
-    HomeScreen(),
+    HomeView(),
     Bagian_depan(),
     Fikih_umrah(),
   ];
@@ -35,7 +36,7 @@ class _HomeWithnavState extends State<HomeWithnav> {
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(30)),
                 child: BottomNavigationBar(
-                    selectedItemColor: Colors.black,
+                    selectedItemColor: kPrimaryColor,
                     unselectedItemColor: Colors.grey,
                     showSelectedLabels: true,
                     showUnselectedLabels: true,
