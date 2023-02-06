@@ -33,8 +33,10 @@ dependencies:
   flutter:
     sdk: flutter
  
+  pdf: ^3.9.0
   google_nav_bar: ^5.0.6
   syncfusion_flutter_pdfviewer: ^20.4.48
+
   # syncfusion_flutter_pdfviewer: ^20.4.48  line_icons: ^2.0.0
 
 dev_dependencies:

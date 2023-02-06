@@ -93,10 +93,22 @@ class _single_pageState extends State<single_page> {
           //           padding: EdgeInsets.all(kDefaultPadding / 2.5),
           //           child:
           Container(
+        height: size.height,
+        width: size.width,
+        decoration: const BoxDecoration(color: kPrimaryColor),
+        child: Container(
+          margin: const EdgeInsets.only(top: 20),
+          padding: const EdgeInsets.all(kDefaultPadding),
+          decoration: const BoxDecoration(
+              color: kBackgroundColor,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20), topRight: Radius.circular(20))),
+          child:
+          Container(
         child: SfPdfViewer.asset(
           widget.list_pdf[widget.index].pdf!,
         ),
-      ),
+      ),),),
       //           )
       //         ],
       //       ),

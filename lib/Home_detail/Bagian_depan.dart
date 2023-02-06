@@ -6,8 +6,6 @@ import 'package:ziarah_rasul/Doa-doa/Fikih_umrah.dart';
 import 'package:ziarah_rasul/Doa-doa/Doa_umrah.dart';
 import 'package:ziarah_rasul/Doa-doa/Tempat_mustajab.dart';
 import 'package:ziarah_rasul/Doa-doa/Lainlain.dart';
-import 'package:ziarah_rasul/list_page.dart/pdf_list.dart';
-import 'package:ziarah_rasul/single_page/pdf_page.dart';
 
 import '../list_page.dart/list_doa_safar.dart';
 import '../list_page.dart/model_daftar.dart';
@@ -73,7 +71,7 @@ class Bagian_depan extends StatelessWidget {
                 InkWell(
                     onTap: () {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => PdfList()));
+                          MaterialPageRoute(builder: (context) => list_doa_safar()));
                     },
                     child: Doa_safar(image: "assets/images/Logo-ZR.png")),
                 Doa_safar(image: "assets/images/Logo-ZR.png"),
