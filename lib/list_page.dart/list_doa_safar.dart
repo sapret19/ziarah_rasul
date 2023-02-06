@@ -39,21 +39,22 @@ class list_doa_safar extends StatelessWidget {
               child: ListView.separated(
                   itemBuilder: ((context, index) {
                     return ListTile(
-                      leading: Text(
+                      leading: 
+                      Text(
                         "${index + 1}",
                         style: TextStyle(
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                             fontSize: 16,
-                            color: kTextColor),
+                            color: kPrimaryColor),
                       ),
                       title: Text(
                         Modeldoasafar[index].nama,
                         style: TextStyle(
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                             fontSize: 16,
-                            color: kTextColor),
+                            color: kPrimaryColor),
                       ),
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
