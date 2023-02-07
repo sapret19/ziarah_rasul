@@ -17,22 +17,21 @@ class Pengumuman extends StatelessWidget {
         height: size.height * 0.35,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            Color.fromRGBO(185, 212, 108, 1),
-                           kPrimaryColor,
-                           kPrimaryColor,
-                           kPrimaryColor
-                          ]),
-                    ),
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color.fromRGBO(185, 212, 108, 1),
+                kPrimaryColor,
+                kPrimaryColor,
+                kPrimaryColor
+              ]),
+        ),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Container(
             child: Column(
               children: [
-                
                 SizedBox(
                   height: 25,
                 ),
@@ -42,11 +41,13 @@ class Pengumuman extends StatelessWidget {
                       width: 15,
                     ),
                     Container(
-                      height: 128,
-                      width: 241,
+                      height: 118,
+                      width: 221,
                       decoration: BoxDecoration(
                           color: Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.only(topRight: Radius.circular(20),bottomLeft: Radius.circular(20))),
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20))),
                       // pengumuman detail
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +56,7 @@ class Pengumuman extends StatelessWidget {
                             width: 22,
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 27),
+                            margin: EdgeInsets.only(top: 23),
                             height: 63,
                             width: 5,
                             decoration: BoxDecoration(
@@ -69,7 +70,7 @@ class Pengumuman extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(
-                                height: 25,
+                                height: 15,
                               ),
                               Text(
                                 "Ziarah Rosul \nKe-18",
@@ -98,19 +99,21 @@ class Pengumuman extends StatelessWidget {
                       width: 15,
                     ),
                     Container(
-                      height: 128,
-                      width: 241,
+                      height: 118,
+                      width: 221,
                       decoration: BoxDecoration(
                           color: Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.only(topRight: Radius.circular(20),bottomLeft: Radius.circular(20))),
-                          child:  Row(
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20))),
+                      child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
                             width: 22,
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 27),
+                            margin: EdgeInsets.only(top: 23),
                             height: 63,
                             width: 5,
                             decoration: BoxDecoration(
@@ -124,7 +127,7 @@ class Pengumuman extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(
-                                height: 25,
+                                height: 15,
                               ),
                               Text(
                                 "Ziarah Rosul \nKe-19",
@@ -159,7 +162,6 @@ class Pengumuman extends StatelessWidget {
     );
   }
 }
-
 
 class MyClipper extends CustomClipper<Path> {
   @override

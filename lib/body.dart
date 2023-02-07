@@ -22,62 +22,82 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Pencarian(),
           Pengumuman(size: size),
-          Column(
-            children: [
-              Row(
-                children: [
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Doa Safar' + '        ',
-                    index: 45,
+          Container(
+            transform: Matrix4.translationValues(0, -70.0, 1),
+            child: Column(
+              
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Doa Safar' + '        ',
+                      index: 45,
+                    ),
+                    SizedBox(
+            width: 20,
                   ),
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Ziarah Rasul' + '    ',
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Ziarah Rasul' + '    ',
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                // Baris Baru
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Fikih Umrah' + '    ',
+                    ),
+                    SizedBox(
+            width: 20,
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              // Baris Baru
-              Row(
-                children: [
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Fikih Umrah' + '    ',
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Doa Umrah' + '      ',
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                // Baris Baru
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Doa Mustajab',
+                    ),
+                    SizedBox(
+            width: 20,
                   ),
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Doa Umrah' + '      ',
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              // Baris Baru
-              Row(
-                children: [
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Doa Mustajab',
-                  ),
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Lain-lain' + '          ',
-                  ),
-                ],
-              ),
-
-              SizedBox(
-                height: 30,
-              )
-            ],
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Lain-lain' + '          ',
+                    ),
+                  ],
+                ),
+          
+                SizedBox(
+                  height: 30,
+                )
+              ],
+            ),
           )
         ],
       ),

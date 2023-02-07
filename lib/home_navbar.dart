@@ -36,7 +36,7 @@ class _HomeWithnavState extends State<HomeWithnav> {
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(30)),
                 child: BottomNavigationBar(
-                    selectedItemColor: Colors.black,
+                    selectedItemColor: kPrimaryColor,
                     unselectedItemColor: Colors.grey,
                     showSelectedLabels: true,
                     showUnselectedLabels: true,

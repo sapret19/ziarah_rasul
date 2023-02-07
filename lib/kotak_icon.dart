@@ -13,14 +13,18 @@ class Kotak_icon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        GestureDetector(
-          onTap: () => Navigator.of(context).push(MaterialPageRoute(
+        InkWell(
+          onTap:() {
+            Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => list_doa_safar(
                     index: index,
-                  ))),
+                  )));
+          },
           child: Container(
-            transform: Matrix4.translationValues(30.0, -70.0, 1),
+            // transform: Matrix4.translationValues(0, -70.0, 1),
             height: 100,
             width: 157,
             decoration: BoxDecoration(
@@ -90,9 +94,7 @@ class Kotak_icon extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
-          width: 20,
-        ),
+        
       ],
     );
   }
