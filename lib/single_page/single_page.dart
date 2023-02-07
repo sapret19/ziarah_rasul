@@ -29,7 +29,7 @@ class single_page extends StatefulWidget {
 class _single_pageState extends State<single_page> {
   final List<Model_doa_safar> Modeldoasafar = List.generate(
       nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
-  int index = 0;
+  // int index = List.of(elements);
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -46,9 +46,9 @@ class _single_pageState extends State<single_page> {
           padding: EdgeInsets.only(left: kDefaultPadding),
         ),
         title: Text(
-          Modeldoasafar[index].nama,
+          'Panduan Ziarah Rasul',
           style: TextStyle(
-              fontFamily: 'Poppins', fontWeight: FontWeight.bold, fontSize: 20),
+              fontFamily: 'Poppins', fontWeight: FontWeight.w500, fontSize: 18),
         ),
         centerTitle: true,
       ),
@@ -103,12 +103,15 @@ class _single_pageState extends State<single_page> {
               color: kBackgroundColor,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20), topRight: Radius.circular(20))),
-          child:
-          Container(
-        child: SfPdfViewer.asset(
-          widget.list_pdf[widget.index].pdf!,
+          child: Container(
+            child: SfPdfViewer.asset(
+              widget.list_pdf[widget.index].pdf!,
+              initialZoomLevel: 0,
+              pageSpacing: 0,
+            ),
+          ),
         ),
-      ),),),
+      ),
       //           )
       //         ],
       //       ),

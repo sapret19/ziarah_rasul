@@ -17,9 +17,9 @@ AppBar AppBar_page(BuildContext context) {
       padding: EdgeInsets.only(left: kDefaultPadding),
     ),
     title: Text(
-      'Ziarah Rasul',
+      'Panduan Ziarah Rasul',
       style: TextStyle(
-          fontFamily: 'Poppins', fontWeight: FontWeight.bold, fontSize: 20),
+          fontFamily: 'Poppins', fontWeight: FontWeight.w500, fontSize: 18),
     ),
     centerTitle: true,
   );
