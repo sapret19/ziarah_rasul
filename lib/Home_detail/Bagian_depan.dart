@@ -15,8 +15,8 @@ class Bagian_depan extends StatelessWidget {
   Bagian_depan({
     Key? key,
   }) : super(key: key);
-  final List<Model_doa_safar> Modeldoasafar = List.generate(
-      nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
+  // final List<Model_doa_safar> Modeldoasafar = List.generate(
+  //     nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -70,11 +70,8 @@ class Bagian_depan extends StatelessWidget {
               children: [
                 InkWell(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => single_page(
-                                list_doa_safar: Modeldoasafar,
-                                index: 32,
-                              )));
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => list_doa_safar()));
                     },
                     child: Doa_safar(image: "assets/images/Logo-ZR.png")),
                 Doa_safar(image: "assets/images/Logo-ZR.png"),
@@ -125,23 +122,23 @@ class Bagian_depan extends StatelessWidget {
             child: Row(
               children: [
                 Doa_ZR(
-                  image: "Images/contoh.jpg",
+                  image: "assets/images/contoh.jpg",
                   title: "Jenenge \nDungone",
                 ),
                 Doa_ZR(
-                  image: "Images/contoh.jpg",
+                  image: "assets/images/contoh.jpg",
                   title: "Jenenge \nDungone",
                 ),
                 Doa_ZR(
-                  image: "Images/contoh.jpg",
+                  image: "assets/images/contoh.jpg",
                   title: "Jenenge \nDungone",
                 ),
                 Doa_ZR(
-                  image: "Images/contoh.jpg",
+                  image: "assets/images/contoh.jpg",
                   title: "Jenenge \nDungone",
                 ),
                 Doa_ZR(
-                  image: "Images/contoh.jpg",
+                  image: "assets/images/contoh.jpg",
                   title: "Jenenge \nDungone",
                 ),
               ],
@@ -223,19 +220,19 @@ class Bagian_depan extends StatelessWidget {
             child: Row(
               children: [
                 Doa_umrah(
-                  image: "images/contoh.jpg",
+                  image: "assets/images/contoh.jpg",
                   title: "Buat Contoh \nSaja",
                 ),
                 Doa_umrah(
-                  image: "images/contoh.jpg",
+                  image: "assets/images/contoh.jpg",
                   title: "Buat Contoh \nSaja",
                 ),
                 Doa_umrah(
-                  image: "images/contoh.jpg",
+                  image: "assets/images/contoh.jpg",
                   title: "Buat Contoh \nSaja",
                 ),
                 Doa_umrah(
-                  image: "images/contoh.jpg",
+                  image: "assets/images/contoh.jpg",
                   title: "Buat Contoh \nSaja",
                 ),
               ],

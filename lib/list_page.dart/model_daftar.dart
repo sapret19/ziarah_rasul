@@ -6,14 +6,24 @@ class Model_doa_safar {
   );
 }
 
-class Model_Judul {
-  final String judul;
+class Document {
+  String? doc_title;
+  String? doc_url;
 
-  Model_Judul(this.judul);
+  Document(this.doc_title, this.doc_url);
+
+  static List<Document> doc_list = [
+    Document('Doa Naik Kendaraan', 'assets/pdf/1.pdf'),
+    Document('Dod', 'assets/pdf/2.pdf'),
+    Document('Doadsaf', 'assets/pdf/2.pdf'),
+    Document('Dodsa', 'assets/pdf/2.pdf'),
+  ];
+
+  // final map_doc = doc_list.asMap();
 }
 
-class Model_ziarah_rasul {
-  final String ziarah_rasul;
+class Model_pdf {
+  String? pdf;
 
-  Model_ziarah_rasul(this.ziarah_rasul);
+  Model_pdf(this.pdf);
 }

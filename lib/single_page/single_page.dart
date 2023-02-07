@@ -1,78 +1,122 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
 import 'package:ziarah_rasul/single_page/appbar_page.dart';
 import 'package:ziarah_rasul/single_page/navbar_page.dart';
 
+import '../list_page.dart/list_doa_safar.dart';
+
 class single_page extends StatefulWidget {
   final List<Model_doa_safar> list_doa_safar;
   int index;
-  single_page({super.key, required this.list_doa_safar, required this.index});
+  final List<Model_pdf> list_pdf;
+  single_page(
+      {super.key,
+      required this.list_doa_safar,
+      required this.index,
+      required this.list_pdf});
 
   @override
   State<single_page> createState() => _single_pageState();
 }
 
 class _single_pageState extends State<single_page> {
+  final List<Model_doa_safar> Modeldoasafar = List.generate(
+      nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar_page(context),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(
-              height: size.height,
-              width: size.width,
-              decoration: const BoxDecoration(color: kPrimaryColor),
-              child: Container(
-                // height: MediaQuery.of(context).size.height,
-                margin: const EdgeInsets.only(top: 20),
-                padding: const EdgeInsets.all(kDefaultPadding),
-                decoration: const BoxDecoration(
-                    color: kBackgroundColor,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20))),
-                child: Column(
-                  children: [
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      textAlign: TextAlign.center,
-                      widget.list_doa_safar[widget.index].nama,
-                      style: const TextStyle(
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                        color: kPrimaryColor,
-                      ),
-                    ),
-                    // SizedBox(
-                    //   height: 20,
-                    // ),
-                    Padding(
-                      padding: EdgeInsets.all(kDefaultPadding / 2.5),
-                      child: Text(
-                        widget.list_doa_safar[widget.index].nama,
-                        style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: kTextColor),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
+      appBar: AppBar(
+        backgroundColor: kPrimaryColor,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: (() => Navigator.pop(context)),
+          icon: Image.asset(
+            'assets/images/back.png',
+            color: Colors.white,
+          ),
+          padding: EdgeInsets.only(left: kDefaultPadding),
         ),
+        title: Text(
+          Modeldoasafar[index].nama,
+          style: TextStyle(
+              fontFamily: 'Poppins', fontWeight: FontWeight.bold, fontSize: 20),
+        ),
+        centerTitle: true,
       ),
+      body:
+          // SingleChildScrollView(
+          //   child:
+          // Column(
+          //   children:
+          // [
+          // Container(
+          //   height: size.height,
+          //   width: size.width,
+          //   decoration: const BoxDecoration(color: kPrimaryColor),
+          //   child: Container(
+          //     // height: MediaQuery.of(context).size.height,
+          //     margin: const EdgeInsets.only(top: 20),
+          //     padding: const EdgeInsets.all(kDefaultPadding),
+          //     decoration: const BoxDecoration(
+          //         color: kBackgroundColor,
+          //         borderRadius: BorderRadius.only(
+          //             topLeft: Radius.circular(20),
+          //             topRight: Radius.circular(20))),
+          //     child: Column(
+          //       children: [
+          //         const SizedBox(
+          //           height: 10,
+          //         ),
+          //         Text(
+          //           textAlign: TextAlign.center,
+          //           widget.list_doa_safar[widget.index].nama,
+          //           style: const TextStyle(
+          //             fontFamily: 'Poppins',
+          //             fontWeight: FontWeight.bold,
+          //             fontSize: 18,
+          //             color: kPrimaryColor,
+          //           ),
+          //         ),
+          //         // SizedBox(
+          //         //   height: 20,
+          //         // ),
+          //         Padding(
+          //           padding: EdgeInsets.all(kDefaultPadding / 2.5),
+          //           child:
+          Container(
+        height: size.height,
+        width: size.width,
+        decoration: const BoxDecoration(color: kPrimaryColor),
+        child: Container(
+          margin: const EdgeInsets.only(top: 20),
+          padding: const EdgeInsets.all(kDefaultPadding),
+          decoration: const BoxDecoration(
+              color: kBackgroundColor,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20), topRight: Radius.circular(20))),
+          child:
+          Container(
+        child: SfPdfViewer.asset(
+          widget.list_pdf[widget.index].pdf!,
+        ),
+      ),),),
+      //           )
+      //         ],
+      //       ),
+      //     ),
+      //   ),
+      // ],
+      // ),
+      // ),
       bottomNavigationBar: Container(
         height: 65,
         decoration: BoxDecoration(
