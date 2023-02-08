@@ -3,6 +3,7 @@ import 'package:ziarah_rasul/constants.dart';
 
 import 'list_page.dart/list_doa_safar.dart';
 
+
 class Kotak_icon extends StatelessWidget {
   const Kotak_icon({Key? key, this.image, this.title, this.index})
       : super(key: key);
@@ -20,7 +21,7 @@ class Kotak_icon extends StatelessWidget {
           onTap:() {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => list_doa_safar(
-                    index: index,
+                    index: '$index'
                   )));
           },
           child: Container(
