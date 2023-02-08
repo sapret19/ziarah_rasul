@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:ziarah_rasul/Home_detail/pencarian.dart';
 import 'package:ziarah_rasul/Home_detail/pengumuman.dart';
 import 'package:ziarah_rasul/constants.dart';
@@ -12,6 +13,9 @@ class Body extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+
+
+  ItemScrollController _scrollController = ItemScrollController();
   final List<Model_doa_safar> Modeldoasafar = List.generate(
       nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
   final List<Model_pdf> Modelpdf = List.generate(
@@ -39,7 +43,7 @@ class Body extends StatelessWidget {
                     Kotak_icon(
                       image: 'assets/icons/logo_safar.png',
                       title: 'Doa Safar' + '        ',
-                      index: 45,
+                      index: 78 ,
                     ),
                     SizedBox(
             width: 20,

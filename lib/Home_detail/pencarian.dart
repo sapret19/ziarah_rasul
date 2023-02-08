@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:ziarah_rasul/constants.dart';
 
-class Pencarian extends StatelessWidget {
+class Pencarian extends StatefulWidget {
   const Pencarian({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<Pencarian> createState() => _PencarianState();
+}
+
+
+
+class _PencarianState extends State<Pencarian> {
+  TextEditingController _controllerSearch = TextEditingController();
+  Widget? searchTextField = Text("Cari Bacaan");
+  bool search = false;
+  Color _bgColor = Colors.black;
   @override
   Widget build(BuildContext context) {
     final ScreenSize = MediaQuery.of(context).size;
@@ -85,3 +96,4 @@ class Pencarian extends StatelessWidget {
     );
   }
 }
+
