@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                 child: Pencarian(),
               ),
               Pengumuman(size: size),
-              Bagian_depan()
+              // Bagian_depan()
             ],
           ),
         ));

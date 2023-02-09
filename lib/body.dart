@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:ziarah_rasul/Home_detail/pencarian.dart';
 import 'package:ziarah_rasul/Home_detail/pengumuman.dart';
 import 'package:ziarah_rasul/constants.dart';
@@ -12,6 +13,9 @@ class Body extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+
+
+  ItemScrollController _scrollController = ItemScrollController();
   final List<Model_doa_safar> Modeldoasafar = List.generate(
       nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
   final List<Model_pdf> Modelpdf = List.generate(
@@ -22,62 +26,82 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Pencarian(),
           Pengumuman(size: size),
-          Column(
-            children: [
-              Row(
-                children: [
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Doa Safar' + '        ',
-                    index: 45,
+          Container(
+            transform: Matrix4.translationValues(0, -70.0, 1),
+            child: Column(
+              
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Doa Safar' + '        ',
+                      index: 78 ,
+                    ),
+                    SizedBox(
+            width: 20,
                   ),
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Ziarah Rasul' + '    ', index: 35,
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Ziarah Rasul' + '    ', index: 34,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                // Baris Baru
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Fikih Umrah' + '    ', index: 34,
+                    ),
+                    SizedBox(
+            width: 20,
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              // Baris Baru
-              Row(
-                children: [
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Fikih Umrah' + '    ', index: 34,
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Doa Umrah' + '      ', index: 43,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                // Baris Baru
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Doa Mustajab', index: 33,
+                    ),
+                    SizedBox(
+            width: 20,
                   ),
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Doa Umrah' + '      ', index: 32,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              // Baris Baru
-              Row(
-                children: [
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Doa Mustajab', index: 54,
-                  ),
-                  Kotak_icon(
-                    image: 'assets/icons/logo_safar.png',
-                    title: 'Lain-lain' + '          ', index: 65,
-                  ),
-                ],
-              ),
-
-              SizedBox(
-                height: 30,
-              )
-            ],
+                    Kotak_icon(
+                      image: 'assets/icons/logo_safar.png',
+                      title: 'Lain-lain' + '          ', index: 44,
+                    ),
+                  ],
+                ),
+          
+                SizedBox(
+                  height: 30,
+                )
+              ],
+            ),
           )
         ],
       ),

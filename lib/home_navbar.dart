@@ -19,7 +19,7 @@ class _HomeWithnavState extends State<HomeWithnav> {
   int _pageindex = 0;
   final List<Widget> _tablist = [
     HomeView(),
-    Bagian_depan(),
+    // Body(),
     Fikih_umrah(),
   ];
 
@@ -36,7 +36,7 @@ class _HomeWithnavState extends State<HomeWithnav> {
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(30)),
                 child: BottomNavigationBar(
-                    selectedItemColor: Colors.black,
+                    selectedItemColor: kPrimaryColor,
                     unselectedItemColor: Colors.grey,
                     showSelectedLabels: true,
                     showUnselectedLabels: true,
