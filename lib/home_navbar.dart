@@ -19,7 +19,7 @@ class _HomeWithnavState extends State<HomeWithnav> {
   int _pageindex = 0;
   final List<Widget> _tablist = [
     HomeView(),
-    Bagian_depan(),
+    // Body(),
     Fikih_umrah(),
   ];
 
