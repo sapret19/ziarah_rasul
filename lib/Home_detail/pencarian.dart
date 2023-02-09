@@ -18,7 +18,6 @@ class Pencarian extends StatelessWidget {
               Color.fromRGBO(185, 212, 108, 1),
               kPrimaryColor,
               kPrimaryColor
-              
             ]),
       ),
       child: Row(

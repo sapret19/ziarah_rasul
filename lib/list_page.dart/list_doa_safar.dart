@@ -6,13 +6,20 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/home_screen.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
 import 'package:ziarah_rasul/single_page/appbar_page.dart';
 import 'package:ziarah_rasul/single_page/single_page.dart';
 
 class list_doa_safar extends StatelessWidget {
   final index;
-  list_doa_safar({super.key, this.index});
+  list_doa_safar({
+    super.key,
+    this.index,
+  });
+  // ItemScrollController itemScrollController = ItemScrollController();
+  AutoScrollController? controller;
 
   final List<Model_doa_safar> Modeldoasafar = List.generate(
       nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
@@ -21,6 +28,7 @@ class list_doa_safar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    controller = scroll();
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar_page(context),
@@ -37,10 +45,12 @@ class list_doa_safar extends StatelessWidget {
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20))),
               child: ListView.separated(
+                  // itemScrollController: itemScrollController,
+
                   itemBuilder: ((context, index) {
+                    controller?.scrollToIndex(45, preferPosition: AutoScrollPosition.begin);
                     return ListTile(
-                      leading: 
-                      Text(
+                      leading: Text(
                         "${index + 1}",
                         style: TextStyle(
                             fontFamily: 'Poppins',
@@ -57,6 +67,8 @@ class list_doa_safar extends StatelessWidget {
                             color: kPrimaryColor),
                       ),
                       onTap: () {
+                        // itemScrollController.scrollTo(
+                        //     index: 6, duration: Duration(seconds: 1));
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => single_page(
                                 list_doa_safar: Modeldoasafar,
@@ -74,6 +86,12 @@ class list_doa_safar extends StatelessWidget {
                   }),
                   itemCount: nama.length),
             )));
+  }
+
+  scroll() {
+    controller?.scrollToIndex(int.parse(Modeldoasafar[index].nama),
+        preferPosition: AutoScrollPosition.begin,
+        duration: Duration(seconds: 1));
   }
 }
 
@@ -93,7 +111,7 @@ List<String> nama = [
   "Salam Saat Ziarah Makam Baqi'",
   'Salam kepada Sahabat Utsman bin Affan',
   'Salam di Jabal Uhud',
-  "Salam kepada Sahabat Hamzah bin Abdul Muttalib dan Mush'ab bin 'Umair",
+  "Salam kepada Sahabat Hamzah dan Mush'ab",
   'Salam kepada Syuhada Uhud',
   'Ziarah Masjid Quba',
   'Pasar Kurma',
@@ -128,7 +146,7 @@ List<String> nama = [
   'Shalat di Belakang Makam Ibrahim',
   'Doa Minum Air Zam-zam',
   'Doa Sai',
-  'Doa Ketika Hendak Mendaki Bukti Shafa Sebelum Memulai Sai',
+  'Doa Hendak Mendaki Bukti Shafa Sebelum Memulai Sai',
   'Doa Sai Perjalanan Pertama (Shafa ke Marwah)',
   'Doa Sai Perjalanan Kedua (Marwah ke Shafa)',
   'Doa Sai Perjalanan Ketiga (Shafa ke Marwah)',

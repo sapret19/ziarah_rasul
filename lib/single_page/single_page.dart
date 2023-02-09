@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -12,6 +11,7 @@ import 'package:ziarah_rasul/single_page/navbar_page.dart';
 
 import '../list_page.dart/list_doa_safar.dart';
 
+// ignore: must_be_immutable, camel_case_types
 class single_page extends StatefulWidget {
   final List<Model_doa_safar> list_doa_safar;
   int index;
@@ -46,7 +46,9 @@ class _single_pageState extends State<single_page> {
           padding: EdgeInsets.only(left: kDefaultPadding),
         ),
         title: Text(
-          'Panduan Ziarah Rasul',
+          widget.list_doa_safar[widget.index].nama,
+          textAlign: TextAlign.start,
+          maxLines: 4,
           style: TextStyle(
               fontFamily: 'Poppins', fontWeight: FontWeight.w500, fontSize: 18),
         ),
@@ -107,6 +109,7 @@ class _single_pageState extends State<single_page> {
             child: SfPdfViewer.asset(
               widget.list_pdf[widget.index].pdf!,
               initialZoomLevel: 0,
+              enableDoubleTapZooming: true,
               pageSpacing: 0,
             ),
           ),
