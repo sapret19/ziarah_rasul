@@ -1,17 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:ziarah_rasul/constants.dart';
+import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
 
 import 'list_page.dart/list_doa_safar.dart';
 
 
 class Kotak_icon extends StatelessWidget {
-  const Kotak_icon({Key? key, this.image, this.title, this.index})
+  
+   Kotak_icon({Key? key, this.image, this.title, this.index})
       : super(key: key);
 
   final String? image;
   final String? title;
   final int? index;
   @override
+
+    ItemScrollController _scrollController = ItemScrollController();
+  final List<Model_doa_safar> Modeldoasafar = List.generate(
+      nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
+  final List<Model_pdf> Modelpdf = List.generate(
+      pdf.length, (index) => Model_pdf('${pdf[index].toString()}'));
+
+  
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -20,9 +31,7 @@ class Kotak_icon extends StatelessWidget {
         InkWell(
           onTap:() {
             Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => list_doa_safar(
-                    index: '$index'
-                  )));
+              builder: (context) => list_doa_safar(index: "$index",)));
           },
           child: Container(
             // transform: Matrix4.translationValues(0, -70.0, 1),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ziarah_rasul/constants.dart';
+import 'package:ziarah_rasul/list_page.dart/list_doa_safar.dart';
+import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
 
 class Pencarian extends StatefulWidget {
   const Pencarian({
@@ -17,6 +19,8 @@ class _PencarianState extends State<Pencarian> {
   Widget? searchTextField = Text("Cari Bacaan");
   bool search = false;
   Color _bgColor = Colors.black;
+  final List<Model_doa_safar> Modeldoasafar = List.generate(
+      nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
   @override
   Widget build(BuildContext context) {
     final ScreenSize = MediaQuery.of(context).size;
@@ -78,7 +82,11 @@ class _PencarianState extends State<Pencarian> {
                     color: Color.fromARGB(106, 255, 255, 255),
                     borderRadius: BorderRadius.circular(20)),
                 child: TextField(
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      setState(() {
+                        Model_doa_safar('${nama.toString()}');
+                      });
+                    },
                     decoration: InputDecoration(
                         hintText: "Cari Bacaan...",
                         hintStyle: TextStyle(
