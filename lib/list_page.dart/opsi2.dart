@@ -12,14 +12,14 @@ import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
 import 'package:ziarah_rasul/single_page/appbar_page.dart';
 import 'package:ziarah_rasul/single_page/single_page.dart';
 
-class list_doa_safar extends StatelessWidget {
-  final index;
-  list_doa_safar({
+class opsi2 extends StatelessWidget {
+  // final index;
+  opsi2({
     super.key,
-    this.index,
+    // this.index,
   });
-  // ItemScrollController itemScrollController = ItemScrollController();
-  
+  ItemScrollController itemScrollController = ItemScrollController();
+
   // AutoScrollController? controller;
 
   final List<Model_doa_safar> Modeldoasafar = List.generate(
@@ -32,63 +32,114 @@ class list_doa_safar extends StatelessWidget {
     // controller = scroll();
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: AppBar_page(context),
-        body: Container(
-            height: size.height,
-            width: size.width,
-            decoration: const BoxDecoration(color: kPrimaryColor),
-            child: Container(
-              margin: const EdgeInsets.only(top: 20),
-              padding: const EdgeInsets.all(kDefaultPadding),
-              decoration: const BoxDecoration(
-                  color: kBackgroundColor,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20))),
-              child: ListView.separated(
-                  // itemScrollController: itemScrollController,
-                  // initialScrollIndex: 1, 
-                  
-                  itemBuilder: ((context, index) {
-                    // controller?.scrollToIndex(45, preferPosition: AutoScrollPosition.begin);
-                    return ListTile(
-                      leading: Text(
-                        "${index + 1}",
-                        style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            color: kPrimaryColor),
-                      ),
-                      title: Text(
-                        Modeldoasafar[index].nama,
-                        style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            color: kPrimaryColor),
-                      ),
-                      onTap: () {
-                        // itemScrollController.scrollTo(
-                        //     index: 45, duration: Duration(seconds: 1));
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => single_page(
-                                list_doa_safar: Modeldoasafar,
-                                index: index,
-                                list_pdf: Modelpdf)));
-                      },
-                    );
-                  }),
-                  separatorBuilder: ((context, index) {
-                    return Container(
-                      height: 1,
-                      margin: EdgeInsets.only(left: 20, right: 20),
-                      decoration: BoxDecoration(color: kPrimaryColor),
-                    );
-                  }),
-                  itemCount: nama.length),
-            )));
-            
+      appBar: AppBar_page(context),
+      body: Container(
+        height: size.height,
+        width: size.width,
+        decoration: const BoxDecoration(color: kPrimaryColor),
+        child: Column(
+          children: [
+            Container(
+                height: 65,
+                decoration: BoxDecoration(
+                    // color: Colors.white,
+                    borderRadius: BorderRadius.circular(50),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black.withOpacity(.1),
+                          blurRadius: 30,
+                          offset: const Offset(0, 1))
+                    ]),
+                margin: const EdgeInsets.only(
+                    top: 0, bottom: 10, left: 10, right: 10),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      left: kDefaultPadding, right: kDefaultPadding),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(children: [
+                      daftar(
+                          itemScrollController: itemScrollController,
+                          namadaftar: 'Doa Safar',
+                          index: 0),
+                      daftar(
+                          itemScrollController: itemScrollController,
+                          namadaftar: 'Ziarah Rasul',
+                          index: 6),
+                      daftar(
+                          itemScrollController: itemScrollController,
+                          namadaftar: 'Fikih Umrah',
+                          index: 21),
+                      daftar(
+                          itemScrollController: itemScrollController,
+                          namadaftar: 'Doa Umrah',
+                          index: 28),
+                      daftar(
+                          itemScrollController: itemScrollController,
+                          namadaftar: 'Tempat Mustajabah',
+                          index: 63),
+                      daftar(
+                          itemScrollController: itemScrollController,
+                          namadaftar: 'Lain-Lain',
+                          index: 67)
+                    ]),
+                  ),
+                )),
+            Expanded(
+              child: Container(
+                // margin: const EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.all(kDefaultPadding),
+                decoration: const BoxDecoration(
+                    color: kBackgroundColor,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20))),
+                child: ScrollablePositionedList.separated(
+                    itemScrollController: itemScrollController,
+                    // initialScrollIndex: 1,
+
+                    itemBuilder: ((context, index) {
+                      // controller?.scrollToIndex(45, preferPosition: AutoScrollPosition.begin);
+                      return ListTile(
+                        leading: Text(
+                          "${index + 1}",
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: kPrimaryColor),
+                        ),
+                        title: Text(
+                          Modeldoasafar[index].nama,
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: kPrimaryColor),
+                        ),
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => single_page(
+                                  list_doa_safar: Modeldoasafar,
+                                  index: index,
+                                  list_pdf: Modelpdf)));
+                        },
+                      );
+                    }),
+                    separatorBuilder: ((context, index) {
+                      return Container(
+                        height: 1,
+                        margin: EdgeInsets.only(left: 20, right: 20),
+                        decoration: BoxDecoration(color: kPrimaryColor),
+                      );
+                    }),
+                    itemCount: nama.length),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 // Future scroll() async {
 //   await itemScrollController.scrollTo(
@@ -99,10 +150,46 @@ class list_doa_safar extends StatelessWidget {
   //       preferPosition: AutoScrollPosition.begin,
   //       duration: Duration(seconds: 1));
   // }
+}
 
+class daftar extends StatelessWidget {
+  final String namadaftar;
+  final int index;
 
+  const daftar(
+      {super.key,
+      required this.itemScrollController,
+      required this.namadaftar,
+      required this.index});
 
+  final ItemScrollController itemScrollController;
 
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Container(
+        margin: EdgeInsets.only(right: 10),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(50))),
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Text(
+            '$namadaftar',
+            style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: kPrimaryColor),
+          ),
+        ),
+      ),
+      onTap: () {
+        itemScrollController.scrollTo(
+            index: index, duration: Duration(milliseconds: 500));
+      },
+    );
+  }
 }
 
 List<String> nama = [

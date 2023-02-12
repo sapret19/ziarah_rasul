@@ -12,8 +12,6 @@ class Pencarian extends StatefulWidget {
   State<Pencarian> createState() => _PencarianState();
 }
 
-
-
 class _PencarianState extends State<Pencarian> {
   TextEditingController _controllerSearch = TextEditingController();
   Widget? searchTextField = Text("Cari Bacaan");
@@ -43,6 +41,9 @@ class _PencarianState extends State<Pencarian> {
             children: [
               Column(
                 children: [
+                  SizedBox(
+                    height: 40,
+                  ),
                   Container(
                     decoration: BoxDecoration(color: Colors.white, boxShadow: [
                       BoxShadow(
@@ -72,30 +73,7 @@ class _PencarianState extends State<Pencarian> {
               SizedBox(
                 height: 20,
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                height: 48,
-                width: ScreenSize.width * 0.89,
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(106, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(20)),
-                child: TextField(
-                    onChanged: (value) {
-                      setState(() {
-                        Model_doa_safar('${nama.toString()}');
-                      });
-                    },
-                    decoration: InputDecoration(
-                        hintText: "Cari Bacaan...",
-                        hintStyle: TextStyle(
-                            color: Color.fromARGB(226, 255, 255, 255)),
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                        contentPadding: const EdgeInsets.all(kDefaultPadding),
-                        suffixIcon: Icon(Icons.search,
-                            color: Color.fromARGB(226, 255, 255, 255)))),
-              ),
+              // 
             ],
           )
         ],
@@ -103,4 +81,3 @@ class _PencarianState extends State<Pencarian> {
     );
   }
 }
-
