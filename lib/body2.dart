@@ -58,7 +58,26 @@ class Body2 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
+                ),
+                Text(
+                  "Panduan Umrah dan Ziarah Rasul \n Pondok Pesantren An-Nur II",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600),
+                ),
+                Text(
+                  "Bululawang - Malang",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600),
+                ),
+                SizedBox(
+                  height: 17,
                 ),
                 Container(
                     height: 65,
@@ -222,7 +241,7 @@ List<String> nama = [
   'Salam kepada Sahabat Umar bin Khattab',
   "Salam Saat Ziarah Makam Baqi'",
   'Salam kepada Sahabat Utsman bin Affan',
-  'Salam di Jabal Uhud',
+  'Jabal Uhud',
   "Salam kepada Sahabat Hamzah dan Mush'ab",
   'Salam kepada Syuhada Uhud',
   'Ziarah Masjid Quba',
@@ -239,7 +258,7 @@ List<String> nama = [
   'Niat Umrah',
   'Umrah Badal',
   'Doa Sesudah Niat Ihram',
-  'Bacaan Tabiyah',
+  'Bacaan Talbiyah',
   'Bacaan Shalawat',
   'Doa Sesudah Shalawat',
   'Doa Masuk Kota Mekkah',
@@ -289,7 +308,7 @@ List<String> nama = [
   'Doa Datang dari Bepergian',
   'Doa Mau Masuk Kota (Malang)',
   'Doa Perjalanan Menuju Rumah',
-  'Doa Masuk Ruma Kediaman',
+  'Doa Masuk Rumah Kediaman',
   'Adab Kepulangan Umrah',
   'Doa Untuk Keluarga Peziarah',
   'Shalat Jenazah'

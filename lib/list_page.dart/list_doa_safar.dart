@@ -19,7 +19,7 @@ class list_doa_safar extends StatelessWidget {
     this.index,
   });
   // ItemScrollController itemScrollController = ItemScrollController();
-  
+
   // AutoScrollController? controller;
 
   final List<Model_doa_safar> Modeldoasafar = List.generate(
@@ -47,8 +47,8 @@ class list_doa_safar extends StatelessWidget {
                       topRight: Radius.circular(20))),
               child: ListView.separated(
                   // itemScrollController: itemScrollController,
-                  // initialScrollIndex: 1, 
-                  
+                  // initialScrollIndex: 1,
+
                   itemBuilder: ((context, index) {
                     // controller?.scrollToIndex(45, preferPosition: AutoScrollPosition.begin);
                     return ListTile(
@@ -88,7 +88,6 @@ class list_doa_safar extends StatelessWidget {
                   }),
                   itemCount: nama.length),
             )));
-            
   }
 // Future scroll() async {
 //   await itemScrollController.scrollTo(
@@ -99,10 +98,6 @@ class list_doa_safar extends StatelessWidget {
   //       preferPosition: AutoScrollPosition.begin,
   //       duration: Duration(seconds: 1));
   // }
-
-
-
-
 }
 
 List<String> nama = [
@@ -137,7 +132,7 @@ List<String> nama = [
   'Niat Umrah',
   'Umrah Badal',
   'Doa Sesudah Niat Ihram',
-  'Bacaan Tabiyah',
+  'Bacaan Talbiyah',
   'Bacaan Shalawat',
   'Doa Sesudah Shalawat',
   'Doa Masuk Kota Mekkah',

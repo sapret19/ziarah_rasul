@@ -224,7 +224,7 @@ List<String> nama = [
   'Niat Umrah',
   'Umrah Badal',
   'Doa Sesudah Niat Ihram',
-  'Bacaan Tabiyah',
+  'Bacaan Talbiyah',
   'Bacaan Shalawat',
   'Doa Sesudah Shalawat',
   'Doa Masuk Kota Mekkah',
