@@ -12,8 +12,6 @@ class Pencarian extends StatefulWidget {
   State<Pencarian> createState() => _PencarianState();
 }
 
-
-
 class _PencarianState extends State<Pencarian> {
   final controller = TextEditingController();
 
@@ -43,7 +41,6 @@ class _PencarianState extends State<Pencarian> {
               Color.fromRGBO(185, 212, 108, 1),
               kPrimaryColor,
               kPrimaryColor
-              
             ]),
       ),
       child: Row(
@@ -54,6 +51,9 @@ class _PencarianState extends State<Pencarian> {
             children: [
               Column(
                 children: [
+                  SizedBox(
+                    height: 40,
+                  ),
                   Container(
                     decoration: BoxDecoration(color: Colors.white, boxShadow: [
                       BoxShadow(
@@ -83,39 +83,8 @@ class _PencarianState extends State<Pencarian> {
               SizedBox(
                 height: 20,
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                height: 48,
-                width: ScreenSize.width * 0.89,
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(106, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(20)),
-                child: TextField(
-                  controller: controller,
-                    onChanged: (value) {
-                      if (value.isEmpty) {
-                        setState(() {
-                          _searchedJuzName;
-                        });
-                      }
-                      if (value.isNotEmpty) {
-                        setState(() {
-                          _searchedJuzName = list_doa_safar().index;
-                        });
-                      }
-                    },
-                    // controller: TextEditingController(),
-                    decoration: InputDecoration(
-                        hintText: "Cari Bacaan...",
-                        hintStyle: TextStyle(
-                            color: Color.fromARGB(226, 255, 255, 255)),
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                        contentPadding: const EdgeInsets.all(kDefaultPadding),
-                        suffixIcon: Icon(Icons.search,
-                            color: Color.fromARGB(226, 255, 255, 255)))),
-              ),
+
+
             ],
           )
         ],
@@ -123,79 +92,3 @@ class _PencarianState extends State<Pencarian> {
     );
   }
 }
-
-// class CustomSearch extends SearchDelegate {
-//   List<Model_doa_safar>  Modeldoasafar = List.generate(
-//       nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
-//   @override
-//   List<Widget>? buildActions(BuildContext context) {
-//     return [
-//       IconButton(
-//         onPressed: (){
-//           query;
-//         }, 
-//         icon: Icon(Icons.clear)
-//         )
-//     ];
-//     // TODO: implement buildActions
-//     throw UnimplementedError();
-//   }
-
-//   @override
-//   Widget? buildLeading(BuildContext context) {
-//     IconButton(
-//     onPressed: (){
-//       close(context, nama);
-//     },
-//     icon:  Icon(Icons.arrow_back));
-//     // TODO: implement buildLeading
-//     throw UnimplementedError();
-//   }
-
-//   @override
-//   Widget buildResults(BuildContext context) {
-//     List<String>matchQuery = [];
-
-//     for (var item in nama) {
-//       if (item.toLowerCase().contains(query.toLowerCase())) {
-//         matchQuery.add(item);
-//       }
-//     }
-//     return ListView.builder(
-//       itemCount: matchQuery.length,
-//       itemBuilder: (context,index) {
-//         var result = matchQuery[index];
-//         return ListTile(
-//           title: Text('Result'),
-//         );
-//       },
-//     );
-
-//     // TODO: implement buildResults
-//     throw UnimplementedError();
-//   }
-
-//   @override
-//   Widget buildSuggestions(BuildContext context) {
-//    List<String>matchQuery = [];
-
-//     for (var item in nama) {
-//       if (item.toLowerCase().contains(query.toLowerCase())) {
-//         matchQuery.add(item);
-//       }
-//     }
-//     return ListView.builder(
-//       itemCount: matchQuery.length,
-//       itemBuilder: (context,index) {
-//         var result = matchQuery[index];
-//         return ListTile(
-//           title: Text('Result'),
-//         );
-//       },
-//     );
-//     // TODO: implement buildSuggestions
-//     throw UnimplementedError();
-//   }
-// }
-
- 

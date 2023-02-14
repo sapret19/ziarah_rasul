@@ -6,13 +6,21 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/home_screen.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+// import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
 import 'package:ziarah_rasul/single_page/appbar_page.dart';
 import 'package:ziarah_rasul/single_page/single_page.dart';
 
 class list_doa_safar extends StatelessWidget {
   final index;
-  list_doa_safar({super.key, this.index});
+  list_doa_safar({
+    super.key,
+    this.index,
+  });
+  // ItemScrollController itemScrollController = ItemScrollController();
+
+  // AutoScrollController? controller;
 
   final List<Model_doa_safar> Modeldoasafar = List.generate(
       nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
@@ -21,6 +29,7 @@ class list_doa_safar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // controller = scroll();
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar_page(context),
@@ -37,10 +46,13 @@ class list_doa_safar extends StatelessWidget {
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20))),
               child: ListView.separated(
+                  // itemScrollController: itemScrollController,
+                  // initialScrollIndex: 1,
+
                   itemBuilder: ((context, index) {
+                    // controller?.scrollToIndex(45, preferPosition: AutoScrollPosition.begin);
                     return ListTile(
-                      leading: 
-                      Text(
+                      leading: Text(
                         "${index + 1}",
                         style: TextStyle(
                             fontFamily: 'Poppins',
@@ -57,6 +69,8 @@ class list_doa_safar extends StatelessWidget {
                             color: kPrimaryColor),
                       ),
                       onTap: () {
+                        // itemScrollController.scrollTo(
+                        //     index: 45, duration: Duration(seconds: 1));
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => single_page(
                                 list_doa_safar: Modeldoasafar,
@@ -75,6 +89,15 @@ class list_doa_safar extends StatelessWidget {
                   itemCount: nama.length),
             )));
   }
+// Future scroll() async {
+//   await itemScrollController.scrollTo(
+//                             index: 45, duration: Duration(seconds: 1));
+// }
+  // scroll() {
+  //   controller?.scrollToIndex(int.parse(Modeldoasafar[index].nama),
+  //       preferPosition: AutoScrollPosition.begin,
+  //       duration: Duration(seconds: 1));
+  // }
 }
 
 List<String> nama = [
@@ -93,7 +116,7 @@ List<String> nama = [
   "Salam Saat Ziarah Makam Baqi'",
   'Salam kepada Sahabat Utsman bin Affan',
   'Salam di Jabal Uhud',
-  "Salam kepada Sahabat Hamzah bin Abdul Muttalib dan Mush'ab bin 'Umair",
+  "Salam kepada Sahabat Hamzah dan Mush'ab",
   'Salam kepada Syuhada Uhud',
   'Ziarah Masjid Quba',
   'Pasar Kurma',
@@ -109,12 +132,12 @@ List<String> nama = [
   'Niat Umrah',
   'Umrah Badal',
   'Doa Sesudah Niat Ihram',
-  'Bacaan Tabiyah',
+  'Bacaan Talbiyah',
   'Bacaan Shalawat',
   'Doa Sesudah Shalawat',
   'Doa Masuk Kota Mekkah',
   'Doa Ketika Melihat Masjidil Haram',
-  'DOa Masuk Masjidil Haram',
+  'Doa Masuk Masjidil Haram',
   "Denah Ka'bah",
   "Doa Ketika Melihat Ka'bah",
   'Thawaf',
@@ -127,8 +150,9 @@ List<String> nama = [
   'Thawaf Putaran Ketujuh',
   'Shalat di Belakang Makam Ibrahim',
   'Doa Minum Air Zam-zam',
-  'Doa Sai',
-  'Doa Ketika Hendak Mendaki Bukti Shafa Sebelum Memulai Sai',
+  'Sai',
+  'Doa Hendak Mendaki Bukti Shafa Sebelum Memulai Sai',
+  'Doa di Atas Bukit Shafa Ketika Menghadap Kiblat',
   'Doa Sai Perjalanan Pertama (Shafa ke Marwah)',
   'Doa Sai Perjalanan Kedua (Marwah ke Shafa)',
   'Doa Sai Perjalanan Ketiga (Shafa ke Marwah)',
@@ -166,83 +190,87 @@ List<String> nama = [
 List<String> pdf = [
   'assets/pdf/1.pdf',
   'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/1.pdf',
-  'assets/pdf/2.pdf',
-  'assets/pdf/1.pdf',
+  'assets/pdf/3.pdf',
+  'assets/pdf/4.pdf',
+  'assets/pdf/5.pdf',
+  'assets/pdf/6.pdf',
+  'assets/pdf/7.pdf',
+  'assets/pdf/8.pdf',
+  'assets/pdf/9.pdf',
+  'assets/pdf/10.pdf',
+  'assets/pdf/11.pdf',
+  'assets/pdf/12.pdf',
+  'assets/pdf/13.pdf',
+  'assets/pdf/14.pdf',
+  'assets/pdf/15.pdf',
+  'assets/pdf/16.pdf',
+  'assets/pdf/17.pdf',
+  'assets/pdf/18.pdf',
+  'assets/pdf/19.pdf',
+  'assets/pdf/20.pdf',
+  'assets/pdf/21.pdf',
+  'assets/pdf/22.pdf',
+  'assets/pdf/23.pdf',
+  'assets/pdf/24.pdf',
+  'assets/pdf/25.pdf',
+  'assets/pdf/26.pdf',
+  'assets/pdf/27.pdf',
+  'assets/pdf/28.pdf',
+  'assets/pdf/29.pdf',
+  'assets/pdf/30.pdf',
+  'assets/pdf/31.pdf',
+  'assets/pdf/32.pdf',
+  'assets/pdf/33.pdf',
+  'assets/pdf/34.pdf',
+  'assets/pdf/35.pdf',
+  'assets/pdf/36.pdf',
+  'assets/pdf/37.pdf',
+  'assets/pdf/38.pdf',
+  'assets/pdf/39.pdf',
+  'assets/pdf/40.pdf',
+  'assets/pdf/41.pdf',
+  'assets/pdf/42.pdf',
+  'assets/pdf/43.pdf',
+  'assets/pdf/44.pdf',
+  'assets/pdf/45.pdf',
+  'assets/pdf/46.pdf',
+  'assets/pdf/47.pdf',
+  'assets/pdf/48.pdf',
+  'assets/pdf/49.pdf',
+  'assets/pdf/50.pdf',
+  'assets/pdf/51.pdf',
+  'assets/pdf/52.pdf',
+  'assets/pdf/53.pdf',
+  'assets/pdf/54.pdf',
+  'assets/pdf/55.pdf',
+  'assets/pdf/56.pdf',
+  'assets/pdf/57.pdf',
+  'assets/pdf/58.pdf',
+  'assets/pdf/59.pdf',
+  'assets/pdf/60.pdf',
+  'assets/pdf/61.pdf',
+  'assets/pdf/62.pdf',
+  'assets/pdf/63.pdf',
+  'assets/pdf/64.pdf',
+  'assets/pdf/65.pdf',
+  'assets/pdf/66.pdf',
+  'assets/pdf/67.pdf',
+  'assets/pdf/68.pdf',
+  'assets/pdf/69.pdf',
+  'assets/pdf/70.pdf',
+  'assets/pdf/71.pdf',
+  'assets/pdf/72.pdf',
+  'assets/pdf/73.pdf',
+  'assets/pdf/74.pdf',
+  'assets/pdf/75.pdf',
+  'assets/pdf/76.pdf',
+  'assets/pdf/77.pdf',
+  'assets/pdf/78.pdf',
+  'assets/pdf/79.pdf',
+  'assets/pdf/80.pdf',
+  'assets/pdf/81.pdf',
+  'assets/pdf/82.pdf',
+  'assets/pdf/83.pdf',
+  'assets/pdf/84.pdf',
+  'assets/pdf/85.pdf',
 ];

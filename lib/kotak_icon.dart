@@ -8,12 +8,13 @@ import 'list_page.dart/list_doa_safar.dart';
 
 class Kotak_icon extends StatelessWidget {
   
-   Kotak_icon({Key? key, this.image, this.title, this.index})
+   Kotak_icon({Key? key, this.image, this.title, required this.index})
       : super(key: key);
 
   final String? image;
   final String? title;
-  final int? index;
+  final int index;
+
   @override
 
     ItemScrollController _scrollController = ItemScrollController();

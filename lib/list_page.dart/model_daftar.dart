@@ -7,6 +7,13 @@ class Model_doa_safar {
 
   static where(Function(dynamic item) param0) {}
 }
+class Model_doa_safar2 {
+  final String nama2;
+
+  Model_doa_safar2(
+    this.nama2,
+  );
+}
 
 class Document {
   String? doc_title;

@@ -50,7 +50,7 @@ class Body extends StatelessWidget {
                   ),
                     Kotak_icon(
                       image: 'assets/icons/logo_safar.png',
-                      title: 'Ziarah Rasul' + '    ',
+                      title: 'Ziarah Rasul' + '    ', index: 34,
                     ),
                   ],
                 ),
@@ -64,14 +64,14 @@ class Body extends StatelessWidget {
                   children: [
                     Kotak_icon(
                       image: 'assets/icons/logo_safar.png',
-                      title: 'Fikih Umrah' + '    ',
+                      title: 'Fikih Umrah' + '    ', index: 34,
                     ),
                     SizedBox(
             width: 20,
                   ),
                     Kotak_icon(
                       image: 'assets/icons/logo_safar.png',
-                      title: 'Doa Umrah' + '      ',
+                      title: 'Doa Umrah' + '      ', index: 43,
                     ),
                   ],
                 ),
@@ -85,14 +85,14 @@ class Body extends StatelessWidget {
                   children: [
                     Kotak_icon(
                       image: 'assets/icons/logo_safar.png',
-                      title: 'Doa Mustajab',
+                      title: 'Doa Mustajab', index: 33,
                     ),
                     SizedBox(
             width: 20,
                   ),
                     Kotak_icon(
                       image: 'assets/icons/logo_safar.png',
-                      title: 'Lain-lain' + '          ',
+                      title: 'Lain-lain' + '          ', index: 44,
                     ),
                   ],
                 ),
