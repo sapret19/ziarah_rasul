@@ -4,6 +4,8 @@ class Model_doa_safar {
   Model_doa_safar(
     this.nama,
   );
+
+  static where(Function(dynamic item) param0) {}
 }
 
 class Document {

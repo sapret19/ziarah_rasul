@@ -102,6 +102,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_keyboard_visibility:
+    dependency: transitive
+    description:
+      name: flutter_keyboard_visibility
+      sha256: b912b7be11ca1b77533056f14fc9f5d8348d2c74b53001f24b8ae5771ca344be
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -272,6 +280,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.5"
+  search_widget:
+    dependency: "direct main"
+    description:
+      name: search_widget
+      sha256: "1bffa2d312a3b6a9819276af6d4715b642d0364774de858496e83e9004406a51"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   sky_engine:
     dependency: transitive
     description: flutter

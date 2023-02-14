@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ziarah_rasul/Post/Global_post.dart';
 import 'package:ziarah_rasul/constants.dart';
+import 'package:ziarah_rasul/head.dart';
 import 'package:ziarah_rasul/home_navbar.dart';
 import 'package:ziarah_rasul/home_screen.dart';
 import 'package:ziarah_rasul/home_view.dart';

@@ -15,15 +15,25 @@ class Pencarian extends StatefulWidget {
 
 
 class _PencarianState extends State<Pencarian> {
-  TextEditingController _controllerSearch = TextEditingController();
-  Widget? searchTextField = Text("Cari Bacaan");
-  bool search = false;
-  Color _bgColor = Colors.black;
-  final List<Model_doa_safar> Modeldoasafar = List.generate(
-      nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
+  final controller = TextEditingController();
+
+  list_doa_safar _searchedJuzName = list_doa_safar();
+  
+  
+      
+       List<String> _dataList =  List.generate(
+      nama.length, (index) => Model_doa_safar('$index').toString());
+      List<String> _filteredList = [];
+ 
+  // void initState() {
+  //   _filteredList = list_doa_safar. Modeldoasafar.toList();
+  //   super.initState();
+  // }
+
   @override
   Widget build(BuildContext context) {
     final ScreenSize = MediaQuery.of(context).size;
+
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -82,11 +92,20 @@ class _PencarianState extends State<Pencarian> {
                     color: Color.fromARGB(106, 255, 255, 255),
                     borderRadius: BorderRadius.circular(20)),
                 child: TextField(
+                  controller: controller,
                     onChanged: (value) {
-                      setState(() {
-                        Model_doa_safar('${nama.toString()}');
-                      });
+                      if (value.isEmpty) {
+                        setState(() {
+                          _searchedJuzName;
+                        });
+                      }
+                      if (value.isNotEmpty) {
+                        setState(() {
+                          _searchedJuzName = list_doa_safar().index;
+                        });
+                      }
                     },
+                    // controller: TextEditingController(),
                     decoration: InputDecoration(
                         hintText: "Cari Bacaan...",
                         hintStyle: TextStyle(
@@ -105,3 +124,78 @@ class _PencarianState extends State<Pencarian> {
   }
 }
 
+// class CustomSearch extends SearchDelegate {
+//   List<Model_doa_safar>  Modeldoasafar = List.generate(
+//       nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
+//   @override
+//   List<Widget>? buildActions(BuildContext context) {
+//     return [
+//       IconButton(
+//         onPressed: (){
+//           query;
+//         }, 
+//         icon: Icon(Icons.clear)
+//         )
+//     ];
+//     // TODO: implement buildActions
+//     throw UnimplementedError();
+//   }
+
+//   @override
+//   Widget? buildLeading(BuildContext context) {
+//     IconButton(
+//     onPressed: (){
+//       close(context, nama);
+//     },
+//     icon:  Icon(Icons.arrow_back));
+//     // TODO: implement buildLeading
+//     throw UnimplementedError();
+//   }
+
+//   @override
+//   Widget buildResults(BuildContext context) {
+//     List<String>matchQuery = [];
+
+//     for (var item in nama) {
+//       if (item.toLowerCase().contains(query.toLowerCase())) {
+//         matchQuery.add(item);
+//       }
+//     }
+//     return ListView.builder(
+//       itemCount: matchQuery.length,
+//       itemBuilder: (context,index) {
+//         var result = matchQuery[index];
+//         return ListTile(
+//           title: Text('Result'),
+//         );
+//       },
+//     );
+
+//     // TODO: implement buildResults
+//     throw UnimplementedError();
+//   }
+
+//   @override
+//   Widget buildSuggestions(BuildContext context) {
+//    List<String>matchQuery = [];
+
+//     for (var item in nama) {
+//       if (item.toLowerCase().contains(query.toLowerCase())) {
+//         matchQuery.add(item);
+//       }
+//     }
+//     return ListView.builder(
+//       itemCount: matchQuery.length,
+//       itemBuilder: (context,index) {
+//         var result = matchQuery[index];
+//         return ListTile(
+//           title: Text('Result'),
+//         );
+//       },
+//     );
+//     // TODO: implement buildSuggestions
+//     throw UnimplementedError();
+//   }
+// }
+
+ 
