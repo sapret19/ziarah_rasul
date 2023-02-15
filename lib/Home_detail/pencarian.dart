@@ -13,15 +13,25 @@ class Pencarian extends StatefulWidget {
 }
 
 class _PencarianState extends State<Pencarian> {
-  TextEditingController _controllerSearch = TextEditingController();
-  Widget? searchTextField = Text("Cari Bacaan");
-  bool search = false;
-  Color _bgColor = Colors.black;
-  final List<Model_doa_safar> Modeldoasafar = List.generate(
-      nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
+  final controller = TextEditingController();
+
+  list_doa_safar _searchedJuzName = list_doa_safar();
+  
+  
+      
+       List<String> _dataList =  List.generate(
+      nama.length, (index) => Model_doa_safar('$index').toString());
+      List<String> _filteredList = [];
+ 
+  // void initState() {
+  //   _filteredList = list_doa_safar. Modeldoasafar.toList();
+  //   super.initState();
+  // }
+
   @override
   Widget build(BuildContext context) {
     final ScreenSize = MediaQuery.of(context).size;
+
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -73,7 +83,8 @@ class _PencarianState extends State<Pencarian> {
               SizedBox(
                 height: 20,
               ),
-              // 
+
+
             ],
           )
         ],
