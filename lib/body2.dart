@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/single_page/single_page.dart';
 import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
@@ -15,6 +16,8 @@ class Body2 extends StatelessWidget {
   final List<Model_pdf> Modelpdf = List.generate(
       pdf.length, (index) => Model_pdf('${pdf[index].toString()}'));
   ItemScrollController itemScrollController = ItemScrollController();
+  final Uri _url =
+      Uri.parse('https://ziarahrasul.annur2.net/informasi-pendaftaran/');
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -49,7 +52,7 @@ class Body2 extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(7))),
                   child: Image(
-                    image: const AssetImage('assets/images/Logo-ZR.png'),
+                    image: const AssetImage('assets/images/icon_zr.png'),
                     height: AppBar().preferredSize.height,
                   ),
                 ),
@@ -118,7 +121,30 @@ class Body2 extends StatelessWidget {
                           daftar(
                               itemScrollController: itemScrollController,
                               namadaftar: 'Lain-Lain',
-                              index: 57)
+                              index: 57),
+                          GestureDetector(
+                            child: Container(
+                              margin: EdgeInsets.only(right: 10),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50))),
+                              child: Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Text(
+                                  'Info Ziarah Rasul',
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      color: kPrimaryColor),
+                                ),
+                              ),
+                            ),
+                            onTap: () {
+                              launchUrl(_url);
+                            },
+                          )
                         ]),
                       ),
                     )),

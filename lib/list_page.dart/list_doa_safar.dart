@@ -5,11 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:ziarah_rasul/constants.dart';
-import 'package:ziarah_rasul/home_screen.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 // import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
-import 'package:ziarah_rasul/single_page/appbar_page.dart';
 import 'package:ziarah_rasul/single_page/single_page.dart';
 
 class list_doa_safar extends StatelessWidget {
@@ -32,7 +30,7 @@ class list_doa_safar extends StatelessWidget {
     // controller = scroll();
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: AppBar_page(context),
+        // appBar: AppBar_page(context),
         body: Container(
             height: size.height,
             width: size.width,

@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:ziarah_rasul/constants.dart';
-import 'package:ziarah_rasul/home_navbar.dart';
-import 'package:ziarah_rasul/home_screen.dart';
 import 'package:ziarah_rasul/home_view.dart';
 
 class Screen extends StatefulWidget {
@@ -39,7 +37,7 @@ class _ScreenState extends State<Screen> {
       backgroundColor: kPrimaryColor,
       body: Center(
         child: Image.asset(
-          'assets/images/splass.png',
+          'assets/images/splash.png',
         ),
       ),
     );

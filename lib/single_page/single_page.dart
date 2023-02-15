@@ -6,8 +6,6 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
-import 'package:ziarah_rasul/single_page/appbar_page.dart';
-import 'package:ziarah_rasul/single_page/navbar_page.dart';
 
 import '../list_page.dart/list_doa_safar.dart';
 
