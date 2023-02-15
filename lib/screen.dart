@@ -39,7 +39,7 @@ class _ScreenState extends State<Screen> {
       backgroundColor: kPrimaryColor,
       body: Center(
         child: Image.asset(
-          'assets/images/splass ZR.png',
+          'assets/images/splass.png',
         ),
       ),
     );
