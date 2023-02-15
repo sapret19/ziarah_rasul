@@ -39,6 +39,7 @@ dependencies:
 
   searchfield: ^0.7.5
   syncfusion_flutter_pdfviewer: ^20.4.48
+  url_launcher: ^6.1.9
 
 dev_dependencies:
   flutter_lints: ^2.0.0
