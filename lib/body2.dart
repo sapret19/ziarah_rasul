@@ -65,7 +65,7 @@ class Body2 extends StatelessWidget {
                       fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  "Bululawang - Malang",
+                  "Malang - Indonesia",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
