@@ -17,7 +17,7 @@ class Body2 extends StatelessWidget {
       pdf.length, (index) => Model_pdf('${pdf[index].toString()}'));
   ItemScrollController itemScrollController = ItemScrollController();
   final Uri _url =
-      Uri.parse('https://ziarahrasul.annur2.net/informasi-pendaftaran/');
+      Uri.parse('https://ziarahrasul.annur2.net');
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -68,7 +68,7 @@ class Body2 extends StatelessWidget {
                       fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  "Bululawang - Malang",
+                  "Malang - Indonesia",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
