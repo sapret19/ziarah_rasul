@@ -99,6 +99,7 @@ class list_doa_safar extends StatelessWidget {
 }
 
 List<String> nama = [
+  'Kata Pengantar',
   'Doa Keluar Rumah',
   'Shalat Safar',
   'Zikir dan Doa Setelah Shalat Safar',
@@ -186,6 +187,7 @@ List<String> nama = [
   'Shalat Jenazah'
 ];
 List<String> pdf = [
+  'assets/pdf/pengantar.pdf',
   'assets/pdf/1.pdf',
   'assets/pdf/2.pdf',
   'assets/pdf/3.pdf',

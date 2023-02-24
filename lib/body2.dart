@@ -4,7 +4,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/single_page/single_page.dart';
 import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
-import 'package:ziarah_rasul/single_page/single_page_pengantar.dart';
 
 class Body2 extends StatelessWidget {
   Body2({
@@ -98,55 +97,34 @@ class Body2 extends StatelessWidget {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(children: [
-                          GestureDetector(
-                            child: Container(
-                              margin: EdgeInsets.only(right: 10),
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(50))),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10),
-                                child: Text(
-                                  'Pendahuluan',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: kPrimaryColor),
-                                ),
-                              ),
-                            ),
-                            onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) =>
-                                      single_page_pengantar()));
-                            },
-                          ),
                           daftar(
                               itemScrollController: itemScrollController,
-                              namadaftar: 'Doa Safar',
+                              namadaftar: 'Kata Pengantar',
                               index: 0),
                           daftar(
                               itemScrollController: itemScrollController,
+                              namadaftar: 'Doa Safar',
+                              index: 1),
+                          daftar(
+                              itemScrollController: itemScrollController,
                               namadaftar: 'Ziarah Rasul',
-                              index: 5),
+                              index: 6),
                           daftar(
                               itemScrollController: itemScrollController,
                               namadaftar: 'Fikih Umrah',
-                              index: 18),
+                              index: 19),
                           daftar(
                               itemScrollController: itemScrollController,
                               namadaftar: 'Doa Umrah',
-                              index: 20),
+                              index: 21),
                           daftar(
                               itemScrollController: itemScrollController,
                               namadaftar: 'Tempat Mustajabah',
-                              index: 53),
+                              index: 54),
                           daftar(
                               itemScrollController: itemScrollController,
                               namadaftar: 'Lain-Lain',
-                              index: 57),
+                              index: 58),
                           GestureDetector(
                             child: Container(
                               margin: EdgeInsets.only(right: 10),
@@ -275,6 +253,7 @@ class daftar extends StatelessWidget {
 }
 
 List<String> nama = [
+  'Kata Pengantar',
   'Doa Keluar Rumah',
   'Shalat Safar',
   'Doa Naik Kendaraan',
@@ -345,6 +324,7 @@ List<String> nama = [
   'Shalat Jenazah'
 ];
 List<String> pdf = [
+  'assets/pdf/pengantar.pdf',
   'assets/pdf/1.pdf',
   'assets/pdf/2.pdf',
   'assets/pdf/4.pdf',
