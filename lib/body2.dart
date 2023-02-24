@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:ziarah_rasul/constants.dart';
 import 'package:ziarah_rasul/single_page/single_page.dart';
 import 'package:ziarah_rasul/list_page.dart/model_daftar.dart';
+import 'package:ziarah_rasul/single_page/single_page_pengantar.dart';
 
 class Body2 extends StatelessWidget {
   Body2({
@@ -16,8 +17,7 @@ class Body2 extends StatelessWidget {
   final List<Model_pdf> Modelpdf = List.generate(
       pdf.length, (index) => Model_pdf('${pdf[index].toString()}'));
   ItemScrollController itemScrollController = ItemScrollController();
-  final Uri _url =
-      Uri.parse('https://ziarahrasul.annur2.net');
+  final Uri _url = Uri.parse('https://ziarahrasul.annur2.net');
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -98,6 +98,31 @@ class Body2 extends StatelessWidget {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(children: [
+                          GestureDetector(
+                            child: Container(
+                              margin: EdgeInsets.only(right: 10),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50))),
+                              child: Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Text(
+                                  'Pendahuluan',
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      color: kPrimaryColor),
+                                ),
+                              ),
+                            ),
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) =>
+                                      single_page_pengantar()));
+                            },
+                          ),
                           daftar(
                               itemScrollController: itemScrollController,
                               namadaftar: 'Doa Safar',
@@ -142,7 +167,8 @@ class Body2 extends StatelessWidget {
                               ),
                             ),
                             onTap: () {
-                              launchUrl(_url);
+                              launchUrl(_url,
+                                  mode: LaunchMode.externalApplication);
                             },
                           )
                         ]),
