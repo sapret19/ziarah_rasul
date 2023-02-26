@@ -27,7 +27,7 @@ class single_page extends StatefulWidget {
 class _single_pageState extends State<single_page> {
   final List<Model_doa_safar> Modeldoasafar = List.generate(
       nama.length, (index) => Model_doa_safar('${nama[index].toString()}'));
-     
+
   // int index = List.of(elements);
   @override
   Widget build(BuildContext context) {

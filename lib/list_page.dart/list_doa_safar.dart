@@ -211,7 +211,7 @@ List<String> pdf = [
   'assets/pdf/21.pdf',
   'assets/pdf/22.pdf',
   'assets/pdf/23.pdf',
-  'assets/pdf/24.pdf',
+  'assets/pdf/23 - Copy.pdf',
   'assets/pdf/25.pdf',
   'assets/pdf/26.pdf',
   'assets/pdf/27.pdf',
