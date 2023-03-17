@@ -3,5 +3,6 @@
         "Appbar",
         "jenis",
         "Modeldoasafar"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

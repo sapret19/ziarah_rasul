@@ -8,7 +8,7 @@
 PRODUCT_NAME = ziarah_rasul
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.ziarahRasul
+PRODUCT_BUNDLE_IDENTIFIER = com.ziarahRasul
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 com. All rights reserved.
